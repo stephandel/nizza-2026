@@ -87,9 +87,7 @@ nav.topnav { position: sticky; top: 0; z-index: 50; background: var(--surface); 
 .page-header { padding: 40px 20px 8px; }
 
 /* ---- hero / home ---- */
-.hero { position: relative; min-height: 54vh; display: flex; align-items: center; background: linear-gradient(155deg, #cfe0dd 0%, #e9dfc4 55%, #f3e9d6 100%); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { background: linear-gradient(155deg, #16302f 0%, #2c2515 55%, #241f16 100%); } }
-:root[data-theme="dark"] .hero { background: linear-gradient(155deg, #16302f 0%, #2c2515 55%, #241f16 100%); }
+.hero { position: relative; min-height: 58vh; display: flex; align-items: center; background: linear-gradient(155deg, rgba(20,38,42,0.72) 0%, rgba(30,26,15,0.55) 55%, rgba(20,20,18,0.72) 100%), url('images/hero-nice.jpg'); background-size: cover; background-position: center 65%; }
 .hero-inner { position: relative; z-index: 1; padding: 40px 20px; max-width: 1180px; margin: 0 auto; width: 100%; }
 .hero-card { background: var(--home-card-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 22px; padding: 34px 32px; max-width: 640px; box-shadow: 0 14px 44px rgba(20,20,15,0.18); }
 .hero-card .eyebrow { color: var(--teal); }
@@ -242,9 +240,9 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-card">
-        <div class="eyebrow">Strukturtest · Kurztrip</div>
+        <div class="eyebrow">Kurztrip · Côte d'Azur</div>
         <h1>Nizza &amp; Côte d'Azur</h1>
-        <p class="sub">Do 3.09. – So 7.09.2026 · drei Reisende, ein Mietwagen, ein Ankerpunkt bei Cagnes-sur-Mer/Villeneuve-Loubet. Diese Seite testet, ob sich der Aufbau unseres Fuerteventura-Reiseführers auf ein zweites, ganz anderes Ziel übertragen lässt.</p>
+        <p class="sub">Fünf Tage zwischen Weinbergen über Nizza, Flohmärkten in der Altstadt und lauen Abenden am Meer — Do 3.09. bis So 7.09.2026, mit Cagnes-sur-Mer/Villeneuve-Loubet als Ausgangspunkt.</p>
         <div class="countdown" id="countdown">
           <div class="cd-box"><span class="cd-n" id="cd-days">–</span><span class="cd-l">Tage</span></div>
           <div class="cd-box"><span class="cd-n" id="cd-hours">–</span><span class="cd-l">Std.</span></div>
@@ -259,18 +257,18 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       <div class="eyebrow">Für wen</div>
       <h2>Drei sehr unterschiedliche Interessen, ein Auto</h2>
       <ul class="steps">
-        <li><strong>Vater (54)</strong> — Weinliebhaber &amp; Verkäufer. Will verkosten <em>und</em> schöne Weinlagen sehen, nicht nur Termine abklappern.</li>
-        <li><strong>Sohn (16)</strong> — verkauft gebrauchte Kleidung über Vinted. Sucht Flohmärkte, Vintage-Läden, Streetwear.</li>
-        <li><strong>Großmutter (75–80)</strong> — wohnt vor Ort, gut zu Fuß, keine Einschränkungen. Kennt sich vor Ort schon aus.</li>
+        <li><strong>Weinliebhaber</strong> — will verkosten <em>und</em> schöne Weinlagen sehen, nicht nur Termine abklappern.</li>
+        <li><strong>Vintage- &amp; Streetwear-Fan</strong> — sucht Flohmärkte, Second-Hand-Läden, Insta-taugliche Ecken.</li>
+        <li><strong>Ortskundig</strong> — wohnt vor Ort, gut zu Fuß unterwegs, kennt die Gegend schon gut.</li>
       </ul>
-      <p class="sub">Fünf Tage, ein Auto, eine 75–80-Jährige mit im Programm — das heißt bewusst <strong>weniger Ziele pro Tag</strong> als bei einer 13-Nächte-Reise mit viel Leerlauf. Diese Seite bündelt kuratierte Auswahllisten statt Vollständigkeit.</p>
+      <p class="sub">Fünf Tage, ein Auto, drei sehr unterschiedliche Interessen — das heißt bewusst <strong>weniger Ziele pro Tag</strong>, dafür in Ruhe. Diese Seite bündelt kuratierte Auswahllisten statt Vollständigkeit.</p>
 
       <div class="eyebrow" style="margin-top:36px">Schnellzugriff</div>
       <div class="quicknav">
         <a class="qn-card" href="#ausfluege"><span class="qn-emoji">🏛️</span><h3>Ausflüge &amp; Highlights</h3><p>Top-Ziele im 30–50-km-Radius, mit Fahrzeit ab Cagnes-sur-Mer</p></a>
         <a class="qn-card" href="#wein"><span class="qn-emoji">🍷</span><h3>Wein</h3><p>9 AOC-Bellet-Weingüter in Nizza + Provence-Alternativen</p></a>
         <a class="qn-card" href="#secondhand"><span class="qn-emoji">👖</span><h3>Second-Hand &amp; Vintage</h3><p>Flohmärkte im Reisezeitraum, Vintage-Läden in Vieux Nice</p></a>
-        <a class="qn-card" href="#gastro"><span class="qn-emoji">🍽️</span><h3>Gastro</h3><p>18 kuratierte Adressen — bodenständig bis Michelin-Stern</p></a>
+        <a class="qn-card" href="#gastro"><span class="qn-emoji">🍽️</span><h3>Gastro</h3><p>20 kuratierte Adressen — bodenständig bis Michelin-Stern</p></a>
         <a class="qn-card" href="#kalender"><span class="qn-emoji">📅</span><h3>Kalender</h3><p>Was genau vom 3.–7.9.2026 los ist</p></a>
         <a class="qn-card" href="#links"><span class="qn-emoji">🔗</span><h3>Links &amp; Tipps</h3><p>Wetter, Parken, ÖPNV, Notfall, Was-ist-heute-los-Quellen</p></a>
       </div>
@@ -295,9 +293,15 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
   <div class="page-header wrap">
     <div class="eyebrow">Vor Ort</div>
     <h1>Ausflüge &amp; Highlights</h1>
-    <p class="sub">Top-Ziele im 30–50-km-Radius um Cagnes-sur-Mer/Villeneuve-Loubet, sortiert nach Empfehlung. Bei nur 5 Tagen und einer 75–80-Jährigen im Auto: lieber 1–2 Ziele pro Tag gut auskosten als hetzen.</p>
+    <p class="sub">Top-Ziele im 30–50-km-Radius um Cagnes-sur-Mer/Villeneuve-Loubet, sortiert nach Empfehlung. Bei nur 5 Tagen im Programm: lieber 1–2 Ziele pro Tag gut auskosten als hetzen.</p>
   </div>
   <div class="wrap">
+
+    <div class="info-box">
+      <strong>Fotospots unterwegs:</strong> Für die schönsten Handyfotos im Vieux Nice lohnen sich Place Rossetti (barocke Kathedrale), die bunten Fassaden der Rue Droite und der Cours Saleya am Vormarkt-Morgen — für ruhigere Alternativen ohne Menschenmassen die Montée Lesage oder die Place du Gésu. Beste Lichtstimmung: golden hour, also kurz nach Sonnenaufgang für leere Gassen oder kurz vor Sonnenuntergang für Panoramen (z. B. von der Colline du Château auf die Baie des Anges).
+      <p class="source-line" style="margin-top:8px">Quelle: nicesecret.co, hotels.com Guides Go — Stand 01.09.2026, nicht live geprüft.</p>
+    </div>
+
     <div class="excursion-grid">
 
       <article class="ex-card">
@@ -436,6 +440,11 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
 
     <div class="info-box warn">
       <strong>Wichtig für die Spontanplanung:</strong> AOC Bellet ist mit nur ca. 48 Hektar eine der kleinsten Appellationen Frankreichs — eine Handvoll Familienbetriebe auf den Hügeln über Nizza. Geführte Kellerbesichtigungen sind bei den meisten Domaines nur <strong>mit Online-Reservierung</strong> möglich; freie Verkostung im Verkaufsraum geht bei einigen (z. B. Château de Crémat) auch spontan während der Öffnungszeiten. Für zuverlässige aktuelle Öffnungszeiten am besten kurz vorher anrufen oder <a href="https://asncap.fr/vignerons-de-laoc-bellet/" target="_blank" rel="noopener">asncap.fr</a> prüfen.
+    </div>
+
+    <div class="info-box" style="margin-top:16px">
+      <strong>Für Kenner — Rebsorten &amp; weitere Adressen:</strong> AOC Bellet ist für eine französische Appellation ungewöhnlich: fast ausschließlich autochthone Rebsorten. Weiß wird meist aus <strong>Rolle</strong> (der lokale Name für Vermentino) gekeltert, oft mit etwas Chardonnay/Roussanne; Rot und Rosé tragen vor allem <strong>Braquet</strong> und <strong>Folle Noire</strong> — beide praktisch nirgendwo sonst in Frankreich in nennenswerter Menge angebaut. Wer über die Domaines hinaus breiter durch Bellet und Nachbarregionen (Saint-Jeannet, Abbaye de Lérins, Saint-Paul-de-Vence) probieren will, ohne jedes Weingut einzeln anzufahren: <strong>La Cave de la Tour</strong> (Familienbetrieb seit 1947) und <strong>La Cave du Cours</strong> im Vieux Nice führen Bellet glasweise, dazu <strong>La Belle Cave</strong> (8 Rue Bavastro) als Caviste zum Mitnehmen. Unter den Bars mit guter Weinkarte gelten Le Vingt4, La Part des Anges und Cave Bianchi 1860 als gesetzt.
+      <p class="source-line" style="margin-top:8px">Quelle: winalist.fr, pagesjaunes.fr, allgemeines Rebsorten-Wissen AOC Bellet — Stand 01.09.2026, nicht live geprüft.</p>
     </div>
 
     <h2 style="margin-top:30px">AOC Bellet — Weingüter auf den Hügeln von Nizza</h2>
@@ -601,7 +610,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
   <div class="page-header wrap">
     <div class="eyebrow">Vor Ort</div>
     <h1>Second-Hand &amp; Vintage</h1>
-    <p class="sub">Flohmärkte im genauen Reisezeitraum plus Vintage-/Second-Hand-Läden in Vieux Nice — kuratiert für den 16-Jährigen mit Vinted-Nebenjob.</p>
+    <p class="sub">Flohmärkte im genauen Reisezeitraum plus Vintage-/Second-Hand-Läden in Vieux Nice — kuratiert für alle, die gerne stöbern und mit Second-Hand-Mode unterwegs sind.</p>
   </div>
   <div class="wrap">
 
@@ -612,7 +621,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
         <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🗄️</span></div>
         <div class="ex-body">
           <h3>Puces de Nice</h3>
-          <p>Der etablierte Antiquitäten- &amp; Trödelmarkt im Hafenviertel von Nizza — Dutzende feste Stände, jeden Werktag außer Sonntag/Montag geöffnet. Passt an <strong>jedem</strong> unserer Reisetage außer So 7.9.</p>
+          <p>Der etablierte Antiquitäten- &amp; Trödelmarkt im Hafenviertel von Nizza — Dutzende feste Stände, jeden Werktag außer Sonntag/Montag geöffnet. Passt an <strong>3.–5.9.</strong> (Do–Sa), <strong>nicht am 6.9. (So) und 7.9. (Mo)</strong>.</p>
           <p class="ex-meta">Rue Robilant, Port de Nice · Di–Sa 10:00–18:00</p>
           <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Puces+de+Nice+Rue+Robilant" target="_blank" rel="noopener">Google Maps ↗</a>
           <p class="source-line">Quelle: petitfute.co.uk, love-spots.com — Stand 01.09.2026.</p>
@@ -733,7 +742,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
   <div class="page-header wrap">
     <div class="eyebrow">Vor Ort</div>
     <h1>Gastro</h1>
-    <p class="sub">18 kuratierte Adressen aus einer größeren, separat gepflegten Recherche (93 Restaurants zwischen Nizza, Cagnes/Antibes und Cannes) — ausgewählt für alle drei Reisenden: bodenständig &amp; familientauglich UND ein besonderer Abend.</p>
+    <p class="sub">20 kuratierte Adressen zwischen Nizza, Cagnes/Antibes und Cannes — ausgewählt für alle drei Reisenden: bodenständig &amp; familientauglich UND ein besonderer Abend.</p>
   </div>
   <div class="wrap">
     <div class="rest-items">
@@ -761,7 +770,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Gehobene Küche, sehr gute Bewertung bei moderatem Preis</p>
           <p class="rc-address">📍 2594 RN 7, Villeneuve-Loubet</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Restaurant+Romania+Villeneuve-Loubet" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -773,7 +782,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Ruhige Lage im Dorfkern von Villeneuve-Loubet — gut für einen entspannten Abend ohne Trubel</p>
           <p class="rc-address">📍 85 Mnt de la Bourgade, Villeneuve-Loubet</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Fleur+de+Sel+Villeneuve-Loubet" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -785,7 +794,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Sandwiches im Einkaufszentrum Polygone Riviera — ideal für eine schnelle Pause zwischen Second-Hand-Shopping</p>
           <p class="rc-address">📍 119 Av. des Alpes, Cagnes-sur-Mer</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Lunicco+Polygone+Riviera+Cagnes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -797,7 +806,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Traditionelle, günstige Küche mitten in Vieux Nice — guter Stopp nach einem Bummel durch die Altstadt/Flohmarkt</p>
           <p class="rc-address">📍 5 Rue Droite, Vieux Nice</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Chez+Palmyre+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -809,7 +818,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Strandlage direkt an der Promenade des Anglais, mediterrane Küche</p>
           <p class="rc-address">📍 15 Prom. des Anglais, Nice</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Bocca+Mar+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -821,7 +830,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Französische Küche, gute Weinauswahl — passt zum Wein-Interesse des Vaters für einen ruhigeren Abend in Nizza</p>
           <p class="rc-address">📍 3 Rue Dalpozzo, Nice</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=l%27Antidote+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -833,7 +842,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Kleines, von außen unscheinbares Restaurant der Spitzenklasse in Nizza</p>
           <p class="rc-address">📍 1 Rue Molière, Nice</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=La+Route+du+Miam+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -845,7 +854,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Unkompliziert, gutes Preis-Leistungs-Verhältnis in Biot — nahe an Les Terraillers, falls man den Ort sowieso ansteuert</p>
           <p class="rc-address">📍 2559 Rte de Grasse, Biot</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Restaurant+l%27Authentique+Biot" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -857,7 +866,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Strand-Lage in Cagnes-sur-Mer, entspannter Mittag mit Meerblick</p>
           <p class="rc-address">📍 1 Rue de la Jetée, Cagnes-sur-Mer</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Napa+Restaurant+Beach+Club+Cagnes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -869,7 +878,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Gehobene französische Küche, guter Stopp bei einem Cannes-Ausflug</p>
           <p class="rc-address">📍 13 Bd de la République, Cannes</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=UVA+restaurant+cannes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -881,7 +890,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Kleines, sehr gut bewertetes Lokal in Villeneuve-Loubet, ruhige Lage</p>
           <p class="rc-address">📍 150 Rue du Vallon, Villeneuve-Loubet</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Zenit+Restaurant+Villeneuve-Loubet" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -893,7 +902,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Romantisches, kleines Lokal mit kreativer französischer Küche in Antibes — Alternative zu Les Terraillers, wenn der Michelin-Stern-Termin nicht passt</p>
           <p class="rc-address">📍 24 Rue de Fersen, Antibes</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=La+Taille+de+Guepe+Antibes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -905,7 +914,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Herzhafte Crêpes, günstig und schnell — guter Snack-Stopp beim Antibes-Bummel</p>
           <p class="rc-address">📍 6 Rue Thuret, Antibes</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Miam+Antibes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -917,7 +926,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Verspieltes Piraten-Konzept in Cannes — bringt Abwechslung für alle Altersgruppen</p>
           <p class="rc-address">📍 39 Rue Georges Clemenceau, Cannes</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Black+Sails+Pirate+Tavern+Cannes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -929,7 +938,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Bestbewertetes Streetfood in Antibes, günstig und unkompliziert</p>
           <p class="rc-address">📍 1465 Chem. des Combes, Antibes</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Le+Five+Cosy+Street+Food+Antibes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -941,7 +950,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Bestbewertet in Cannes (La Bocca), moderat im Preis — Geheimtipp abseits der Croisette</p>
           <p class="rc-address">📍 Centre Commercial Saint Jean, 938 Av. de la République, Cannes</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=L%27Osmose+Restaurant+Cannes" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
         </div>
       </article>
 
@@ -953,12 +962,36 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
           <p class="rc-category">Italienische Küche in Nizza, gute Weinkarte, angemessene Portionsgrößen laut Bewertungen</p>
           <p class="rc-address">📍 2 Rue Dalpozzo, Nice</p>
           <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Le+terre+del+sud+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
-          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+          <p class="source-line">Quelle: Google Maps (Bewertungen/Rezensionen) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#7a3b2e;--tile-b:#a85c3f"><span>🍔</span><div class="rc-rating">⭐ 4,6 (830+)</div><div class="rc-price">12–18 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag sohn">Sohn</span><span class="for-tag">Streetfood</span>
+          <h4>Bubu Burger</h4>
+          <p class="rc-category">Kleine Smash-Burger-Adresse nahe der Altstadt, tägliche Burger-Kontingente mit hausgemachten Buns — oft schon nachmittags ausverkauft, also früh hingehen. Mo–Sa 12–14:30 &amp; 18:30–22 Uhr, So geschlossen.</p>
+          <p class="rc-address">📍 4 Rue Raoul Bosio, Nice</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Bubu+Burger+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: Google-Bewertungen, nicepartylife.com — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#2e5a3b;--tile-b:#4c8a5f"><span>🍕</span><div class="rc-rating">⭐ 4,9 (6.900+)</div><div class="rc-price">10–20 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag sohn">Sohn</span><span class="for-tag">Streetfood</span>
+          <h4>Les Amoureux</h4>
+          <p class="rc-category">Neapolitanische Pizza vom Original-Neapolitaner, seit 16 Jahren im Hafenviertel — leichter, gut verdaulicher Teig nach Neapel-Tradition, sehr beliebt bei Einheimischen.</p>
+          <p class="rc-address">📍 Quartier du Port, Nice</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Les+Amoureux+Pizza+Nice+Port" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: Google-Bewertungen, nicepresse.com — Stand 01.09.2026, nicht live geprüft.</p>
         </div>
       </article>
 
     </div>
-    <p class="dim" style="font-size:12px;margin-top:16px">Vollständige Rohliste (93 Restaurants, drei Zonen): <code>Nizza Reiseführer/restaurants-recherche.md</code> im Fuerteventura-Projektordner. Weitere Quellen: <a href="https://guide.michelin.com/fr/fr/provence-alpes-cote-dazur/restaurants" target="_blank" rel="noopener">Guide Michelin Côte d'Azur</a>, <a href="https://lefooding.com/" target="_blank" rel="noopener">Le Fooding</a>.</p>
+    <p class="dim" style="font-size:12px;margin-top:16px">Weitere Quellen: <a href="https://guide.michelin.com/fr/fr/provence-alpes-cote-dazur/restaurants" target="_blank" rel="noopener">Guide Michelin Côte d'Azur</a>, <a href="https://lefooding.com/" target="_blank" rel="noopener">Le Fooding</a>.</p>
   </div>
 </section>
 
@@ -990,8 +1023,9 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
         <span class="cal-chip cal-chip-market">💿 Vinyl-Flohmarkt Antibes</span>
         <span class="cal-chip cal-chip-note" style="background:var(--bad-bg);color:var(--bad)">⚠️ Puces de Nice: sonntags geschlossen</span>
       </div></div>
-      <div class="cal-day"><div class="cal-date">07.09.<span class="cal-weekday">So</span></div><div class="cal-items">
+      <div class="cal-day"><div class="cal-date">07.09.<span class="cal-weekday">Mo</span></div><div class="cal-items">
         <span class="cal-chip cal-chip-trip">🛫 Abreise / letzter Tag</span>
+        <span class="cal-chip cal-chip-note" style="background:var(--bad-bg);color:var(--bad)">⚠️ Puces de Nice: montags auch geschlossen</span>
       </div></div>
     </div>
     <p class="dim" style="font-size:12px;margin-top:10px">Quelle: nice.fr/agenda, brocabrac.fr — Stand 01.09.2026. Märkte &amp; Vide-greniers können kurzfristig ausfallen, siehe Second-Hand-Seite für Details.</p>
@@ -1126,7 +1160,8 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
 </section>
 
 <footer class="site-footer">
-  Nizza &amp; Côte d'Azur 2026 — Strukturtest der Fuerteventura-Reiseführer-Vorlage · Stand der Recherche: 01.09.2026
+  Nizza &amp; Côte d'Azur 2026 — inoffizieller Reiseführer für den Kurztrip · Stand der Recherche: 01.09.2026<br>
+  Titelbild: Jean-Paul Wettstein via Pexels
 </footer>
 
 <script>
