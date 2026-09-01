@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nizza &amp; Côte d'Azur 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1c1a17;
+  --ink-dim: #5b564c;
+  --page: #e9ebe6;
+  --surface: #f8f8f4;
+  --surface-2: #eef0ea;
+  --border: #d7d6c9;
+  --teal: #0f6e76;
+  --teal-ink: #ffffff;
+  --ochre: #b5741f;
+  --good: #3f8f5c;
+  --good-bg: #e3f1e6;
+  --warn: #9c7a1f;
+  --warn-bg: #f6efd9;
+  --bad: #b24a39;
+  --bad-bg: #f6e4df;
+  --muted-bg: #eceae0;
+  --shadow: 0 1px 2px rgba(28,26,23,0.06), 0 8px 24px -12px rgba(28,26,23,0.18);
+  --home-card-bg: rgba(255,255,255,0.84);
+  --home-tint: #eef2ea;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #ede9e0; --ink-dim: #b4ac9c; --page: #14181a; --surface: #1b2124; --surface-2: #202729;
+    --border: #303836; --teal: #4bc4cb; --teal-ink: #0a2224; --ochre: #e0a24f;
+    --good: #6fc98c; --good-bg: #1c3226; --warn: #d8bc63; --warn-bg: #362d16;
+    --bad: #e08876; --bad-bg: #3a231e; --muted-bg: #242b2c;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    --home-card-bg: rgba(20,24,26,0.66);
+    --home-tint: #1a2420;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #ede9e0; --ink-dim: #b4ac9c; --page: #14181a; --surface: #1b2124; --surface-2: #202729;
+  --border: #303836; --teal: #4bc4cb; --teal-ink: #0a2224; --ochre: #e0a24f;
+  --good: #6fc98c; --good-bg: #1c3226; --warn: #d8bc63; --warn-bg: #362d16;
+  --bad: #e08876; --bad-bg: #3a231e; --muted-bg: #242b2c;
+  --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  --home-card-bg: rgba(20,24,26,0.66);
+  --home-tint: #1a2420;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light dark; scroll-behavior: smooth; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: "Archivo", ui-sans-serif, system-ui, sans-serif; font-size: 15px; line-height: 1.55; }
+h1, h2, h3, h4 { font-family: "Fraunces", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; color: var(--ink); }
+.num { font-family: "JetBrains Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+a { color: var(--teal); }
+button { font-family: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px 80px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 11.5px; color: var(--teal); font-weight: 700; margin-bottom: 10px; }
+.sub { color: var(--ink-dim); max-width: 70ch; margin-top: 10px; font-size: 15.5px; }
+.stat-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.stat { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; min-width: 130px; }
+.stat .n { font-family: "JetBrains Mono", monospace; font-size: 1.3rem; font-weight: 700; color: var(--ink); display:block; }
+.stat .l { font-size: 12px; color: var(--ink-dim); text-transform: uppercase; letter-spacing: 0.06em; }
+.dim { color: var(--ink-dim); }
+
+/* ---- nav ---- */
+nav.topnav { position: sticky; top: 0; z-index: 50; background: var(--surface); border-bottom: 1px solid var(--border); }
+.navwrap { max-width: 1180px; margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.05rem; color: var(--ink); text-decoration: none; display: flex; gap: 7px; align-items: center; }
+.navlinks { display: flex; gap: 2px; flex-wrap: wrap; }
+.nav-link { position: relative; font-size: 13.5px; font-weight: 600; padding: 7px 12px; border-radius: 8px; color: var(--ink-dim); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.nav-link:hover { background: var(--surface-2); color: var(--ink); }
+.nav-link.active { color: var(--teal); background: var(--surface-2); }
+@media (max-width: 720px) {
+  .navwrap { flex-wrap: nowrap; padding: 10px 14px; gap: 10px; }
+  .navlinks { flex: 1 1 auto; min-width: 0; flex-wrap: nowrap; overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .brand { flex-shrink: 0; }
+  .nav-link { padding: 7px 9px; font-size: 13px; }
+  .navlinks::-webkit-scrollbar { display: none; }
+}
+
+/* ---- pages ---- */
+.page { display: none; }
+.page.active { display: block; }
+.page-header { padding: 40px 20px 8px; }
+
+/* ---- hero / home ---- */
+.hero { position: relative; min-height: 54vh; display: flex; align-items: center; background: linear-gradient(155deg, #cfe0dd 0%, #e9dfc4 55%, #f3e9d6 100%); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero { background: linear-gradient(155deg, #16302f 0%, #2c2515 55%, #241f16 100%); } }
+:root[data-theme="dark"] .hero { background: linear-gradient(155deg, #16302f 0%, #2c2515 55%, #241f16 100%); }
+.hero-inner { position: relative; z-index: 1; padding: 40px 20px; max-width: 1180px; margin: 0 auto; width: 100%; }
+.hero-card { background: var(--home-card-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 22px; padding: 34px 32px; max-width: 640px; box-shadow: 0 14px 44px rgba(20,20,15,0.18); }
+.hero-card .eyebrow { color: var(--teal); }
+.hero-card h1 { color: var(--ink); font-size: clamp(2rem, 5vw, 3.1rem); }
+.hero-card .sub { color: var(--ink-dim); }
+.countdown { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+.cd-box { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; padding: 12px 18px; min-width: 74px; text-align: center; }
+.cd-box .cd-n { font-family: "JetBrains Mono", monospace; font-size: 1.6rem; font-weight: 700; display: block; color: var(--ink); }
+.cd-box .cd-l { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-dim); }
+.home-body { padding: 44px 20px 0; background: linear-gradient(180deg, var(--home-tint) 0%, var(--page) 380px); }
+.steps { counter-reset: step; list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; max-width: 68ch; }
+.steps li { counter-increment: step; position: relative; padding-left: 42px; font-size: 14.5px; color: var(--ink-dim); }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--teal); color: var(--teal-ink); font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+.steps strong { color: var(--ink); }
+.quicknav { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
+.qn-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--shadow); }
+.qn-card:hover { border-color: var(--teal); }
+.qn-emoji { font-size: 1.6rem; }
+.qn-card h3 { font-size: 1.02rem; }
+.qn-card p { margin: 0; font-size: 13px; color: var(--ink-dim); }
+
+.mood-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+.mood-card { text-decoration: none; color: inherit; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 16px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; box-shadow: var(--shadow); transition: transform .15s, border-color .15s, background .15s; }
+.mood-card:hover { transform: translateY(-2px); border-color: var(--teal); background: var(--surface-2); }
+.mood-emoji { font-size: 1.9rem; margin-bottom: 2px; }
+.mood-label { font-weight: 700; font-size: 14px; }
+.mood-hint { font-size: 11.5px; color: var(--ink-dim); }
+
+/* ---- generic media tile (replaces photos — no image set for this quick build) ---- */
+.tile-media { position: relative; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; color: rgba(255,255,255,0.92); background: linear-gradient(155deg, var(--tile-a, #0f6e76), var(--tile-b, #1c9aa3)); }
+.tile-badge { position: absolute; top: 10px; left: 10px; background: rgba(20,24,26,0.68); color: #fff; font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 12.5px; padding: 3px 10px; border-radius: 999px; }
+.tile-tag { position: absolute; left: 10px; bottom: 10px; background: rgba(20,24,26,0.68); color: #fff; font-size: 11.5px; padding: 3px 9px; border-radius: 999px; }
+
+/* ---- cards: excursions / wine / vintage (ex-card) ---- */
+.sort-filter-bar { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin: 18px 0 4px; }
+.sf-label { font-size: 12.5px; color: var(--ink-dim); display: flex; align-items: center; gap: 6px; }
+.sf-label select { font-family: inherit; font-size: 13px; padding: 6px 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); }
+.results-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+
+.excursion-grid, .rest-items, .wine-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 18px; }
+.ex-card, .rc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.ex-body, .rc-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 7px; flex: 1; }
+.ex-body h3, .rc-body h4 { font-size: 1.05rem; line-height: 1.25; }
+.ex-body p, .rc-body p { margin: 0; font-size: 13.5px; color: var(--ink-dim); }
+.ex-meta, .rc-category { font-size: 12.5px !important; color: var(--ink-dim); }
+.rc-address { font-size: 12.5px !important; }
+.for-tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 9px; border-radius: 999px; background: var(--muted-bg); color: var(--ink-dim); margin-right: 4px; }
+.for-tag.papa { background: var(--warn-bg); color: var(--warn); }
+.for-tag.sohn { background: var(--good-bg); color: var(--good); }
+.for-tag.oma { background: #e4e0f6; color: #6a52c4; }
+:root[data-theme="dark"] .for-tag.oma, @media (prefers-color-scheme: dark) { .for-tag.oma { background: #322a52; color: #b8a6f0; } }
+.for-tag.special { background: var(--bad-bg); color: var(--bad); }
+.card-links, .rc-actions { display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+.btn { display: inline-block; text-decoration: none; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 8px; background: var(--teal); color: var(--teal-ink); border: none; cursor: pointer; }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--ink); }
+details { margin-top: 6px; border-top: 1px solid var(--border); padding-top: 10px; }
+details summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--teal); list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "+ "; }
+details[open] summary::before { content: "− "; }
+.detail-inner { padding-top: 10px; display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--ink-dim); }
+.detail-inner h5 { font-family: "Archivo", sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-dim); font-weight: 700; margin: 0 0 2px; }
+.attr-row { display: flex; gap: 8px; }
+.attr-row .l { flex-shrink: 0; min-width: 108px; color: var(--ink-dim); }
+.attr-row .v { color: var(--ink); }
+.source-line { font-size: 11.5px; color: var(--ink-dim); border-top: 1px dashed var(--border); padding-top: 8px; margin-top: 2px; }
+.source-line .verified { color: var(--good); font-weight: 700; }
+
+/* rating/price badges reused on gastro tiles */
+.rc-rating { position: absolute; top: 10px; right: 10px; background: rgba(20,24,26,0.72); color: #fdf6e3; font-size: 12px; font-weight: 700; padding: 4px 9px; border-radius: 999px; font-family: "JetBrains Mono", monospace; }
+.rc-price { position: absolute; bottom: 10px; right: 10px; background: rgba(255,255,255,0.88); color: #1c1a17; font-size: 11.5px; font-weight: 700; padding: 3px 9px; border-radius: 999px; }
+
+/* ---- calendar ---- */
+.cal-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 18px; }
+@media (max-width: 860px) { .cal-strip { grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); } }
+.cal-day { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px; min-height: 130px; }
+.cal-date { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 14px; display: flex; justify-content: space-between; }
+.cal-weekday { font-weight: 400; color: var(--ink-dim); font-size: 11.5px; text-transform: uppercase; }
+.cal-items { display: flex; flex-direction: column; gap: 6px; }
+.cal-chip { font-size: 11.5px; padding: 4px 8px; border-radius: 8px; background: var(--muted-bg); color: var(--ink-dim); line-height: 1.3; }
+.cal-chip-trip { background: var(--good-bg); color: var(--good); font-weight: 700; }
+.cal-chip-market { background: var(--warn-bg); color: var(--warn); }
+.cal-chip-event { background: var(--bad-bg); color: var(--bad); }
+.cal-chip-wine { background: #e4e0f6; color: #6a52c4; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cal-chip-wine { background: #322a52; color: #b8a6f0; } }
+:root[data-theme="dark"] .cal-chip-wine { background: #322a52; color: #b8a6f0; }
+
+.events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 18px; }
+.event-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 8px; }
+.event-date { font-family: "JetBrains Mono", monospace; font-size: 12.5px; font-weight: 700; color: var(--teal); }
+.event-card p { margin: 0; font-size: 13.5px; color: var(--ink-dim); }
+.event-foot { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
+.event-price { font-size: 12.5px; color: var(--ink-dim); }
+
+/* ---- links page ---- */
+.links-box { margin-top: 34px; }
+.links-box h2 { font-size: 1.2rem; }
+.link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-top: 14px; }
+.link-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 3px; box-shadow: var(--shadow); }
+.link-card:hover { border-color: var(--teal); }
+.link-card strong { font-size: 14px; color: var(--ink); }
+.link-card span { font-size: 12.5px; color: var(--ink-dim); }
+.insider-list { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.insider-row { display: flex; gap: 12px; align-items: flex-start; }
+.insider-n { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--teal); color: var(--teal-ink); font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+.insider-body strong { font-size: 13.5px; }
+.insider-body p { margin: 2px 0 0; font-size: 12.5px; color: var(--ink-dim); }
+.rc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.rc-chip { font-size: 11.5px; background: var(--muted-bg); color: var(--ink-dim); padding: 4px 10px; border-radius: 999px; }
+
+/* ---- live weather ---- */
+.weather-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; box-shadow: var(--shadow); margin-top: 18px; }
+.weather-now { display: grid; grid-template-columns: repeat(auto-fit,minmax(110px,1fr)); gap: 12px; margin-top: 12px; }
+.weather-now .stat { min-width: 0; }
+.weather-status { font-size: 12px; color: var(--ink-dim); margin-top: 10px; }
+.forecast-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(120px,1fr)); gap: 10px; margin-top: 16px; }
+.fc-day { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 10px; text-align: center; }
+.fc-day .fc-date { font-size: 11.5px; color: var(--ink-dim); text-transform: uppercase; }
+.fc-day .fc-icon { font-size: 1.6rem; margin: 4px 0; }
+.fc-day .fc-temp { font-family: "JetBrains Mono", monospace; font-weight: 700; }
+
+/* ---- intro/info boxes ---- */
+.info-box { background: var(--surface-2); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; margin: 18px 0; font-size: 13.5px; color: var(--ink-dim); }
+.info-box strong { color: var(--ink); }
+.info-box.warn { background: var(--warn-bg); border-color: transparent; }
+.info-box.warn strong { color: var(--warn); }
+
+footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12px; color: var(--ink-dim); }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="navwrap">
+    <a class="brand" href="#home">🌊 Nizza &amp; Côte d'Azur</a>
+    <div class="navlinks">
+      <a class="nav-link" data-page="home" href="#home">Start</a>
+      <a class="nav-link" data-page="ausfluege" href="#ausfluege">Ausflüge</a>
+      <a class="nav-link" data-page="wein" href="#wein">Wein</a>
+      <a class="nav-link" data-page="secondhand" href="#secondhand">Second-Hand</a>
+      <a class="nav-link" data-page="gastro" href="#gastro">Gastro</a>
+      <a class="nav-link" data-page="kalender" href="#kalender">Kalender</a>
+      <a class="nav-link" data-page="links" href="#links">Links &amp; Tipps</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HOME ============ -->
+<section class="page" id="page-home">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-card">
+        <div class="eyebrow">Strukturtest · Kurztrip</div>
+        <h1>Nizza &amp; Côte d'Azur</h1>
+        <p class="sub">Do 3.09. – So 7.09.2026 · drei Reisende, ein Mietwagen, ein Ankerpunkt bei Cagnes-sur-Mer/Villeneuve-Loubet. Diese Seite testet, ob sich der Aufbau unseres Fuerteventura-Reiseführers auf ein zweites, ganz anderes Ziel übertragen lässt.</p>
+        <div class="countdown" id="countdown">
+          <div class="cd-box"><span class="cd-n" id="cd-days">–</span><span class="cd-l">Tage</span></div>
+          <div class="cd-box"><span class="cd-n" id="cd-hours">–</span><span class="cd-l">Std.</span></div>
+          <div class="cd-box"><span class="cd-n" id="cd-mins">–</span><span class="cd-l">Min.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-body">
+    <div class="wrap">
+      <div class="eyebrow">Für wen</div>
+      <h2>Drei sehr unterschiedliche Interessen, ein Auto</h2>
+      <ul class="steps">
+        <li><strong>Vater (54)</strong> — Weinliebhaber &amp; Verkäufer. Will verkosten <em>und</em> schöne Weinlagen sehen, nicht nur Termine abklappern.</li>
+        <li><strong>Sohn (16)</strong> — verkauft gebrauchte Kleidung über Vinted. Sucht Flohmärkte, Vintage-Läden, Streetwear.</li>
+        <li><strong>Großmutter (75–80)</strong> — wohnt vor Ort, gut zu Fuß, keine Einschränkungen. Kennt sich vor Ort schon aus.</li>
+      </ul>
+      <p class="sub">Fünf Tage, ein Auto, eine 75–80-Jährige mit im Programm — das heißt bewusst <strong>weniger Ziele pro Tag</strong> als bei einer 13-Nächte-Reise mit viel Leerlauf. Diese Seite bündelt kuratierte Auswahllisten statt Vollständigkeit.</p>
+
+      <div class="eyebrow" style="margin-top:36px">Schnellzugriff</div>
+      <div class="quicknav">
+        <a class="qn-card" href="#ausfluege"><span class="qn-emoji">🏛️</span><h3>Ausflüge &amp; Highlights</h3><p>Top-Ziele im 30–50-km-Radius, mit Fahrzeit ab Cagnes-sur-Mer</p></a>
+        <a class="qn-card" href="#wein"><span class="qn-emoji">🍷</span><h3>Wein</h3><p>9 AOC-Bellet-Weingüter in Nizza + Provence-Alternativen</p></a>
+        <a class="qn-card" href="#secondhand"><span class="qn-emoji">👖</span><h3>Second-Hand &amp; Vintage</h3><p>Flohmärkte im Reisezeitraum, Vintage-Läden in Vieux Nice</p></a>
+        <a class="qn-card" href="#gastro"><span class="qn-emoji">🍽️</span><h3>Gastro</h3><p>18 kuratierte Adressen — bodenständig bis Michelin-Stern</p></a>
+        <a class="qn-card" href="#kalender"><span class="qn-emoji">📅</span><h3>Kalender</h3><p>Was genau vom 3.–7.9.2026 los ist</p></a>
+        <a class="qn-card" href="#links"><span class="qn-emoji">🔗</span><h3>Links &amp; Tipps</h3><p>Wetter, Parken, ÖPNV, Notfall, Was-ist-heute-los-Quellen</p></a>
+      </div>
+
+      <div class="eyebrow" style="margin-top:36px">Stimmung wählen</div>
+      <div class="mood-grid">
+        <a class="mood-card" href="#wein"><span class="mood-emoji">🍇</span><span class="mood-label">Wein-Tag</span><span class="mood-hint">Bellet + Hinterland</span></a>
+        <a class="mood-card" href="#secondhand"><span class="mood-emoji">🧥</span><span class="mood-label">Vintage-Tag</span><span class="mood-hint">Flohmarkt + Vieux Nice</span></a>
+        <a class="mood-card" href="#ausfluege"><span class="mood-emoji">🏖️</span><span class="mood-label">Küsten-Tag</span><span class="mood-hint">Nizza, Antibes, Cap</span></a>
+        <a class="mood-card" href="#gastro"><span class="mood-emoji">🥂</span><span class="mood-label">Besonderer Abend</span><span class="mood-hint">Michelin-Stern in Biot</span></a>
+      </div>
+
+      <div class="info-box" style="margin-top:36px">
+        <strong>Stand der Recherche:</strong> 01.09.2026, zwei Tage vor Abreise. Fakten sind mit Quelle markiert; wo live geprüft, ist das vermerkt. Alles andere ist Desk-Recherche — vor Ort kurz gegenchecken, besonders Öffnungszeiten und Marktermine.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUSFLÜGE ============ -->
+<section class="page" id="page-ausfluege">
+  <div class="page-header wrap">
+    <div class="eyebrow">Vor Ort</div>
+    <h1>Ausflüge &amp; Highlights</h1>
+    <p class="sub">Top-Ziele im 30–50-km-Radius um Cagnes-sur-Mer/Villeneuve-Loubet, sortiert nach Empfehlung. Bei nur 5 Tagen und einer 75–80-Jährigen im Auto: lieber 1–2 Ziele pro Tag gut auskosten als hetzen.</p>
+  </div>
+  <div class="wrap">
+    <div class="excursion-grid">
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🏛️</span><span class="tile-badge">#1</span></div>
+        <div class="ex-body">
+          <h3>Vieux Nice &amp; Cours Saleya</h3>
+          <p>Altstadtgassen, der tägliche Blumen-/Gemüsemarkt (Di–So) und abends Bars &amp; Socca-Stände. Fußläufig gut für alle drei — auch für die Großmutter angenehm, da flach und schattig.</p>
+          <p class="ex-meta">ca. 20–25 Min. (15 km) ab Cagnes-sur-Mer · kostenlos, nur Bummeln</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Cours+Saleya+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#1c6e9c;--tile-b:#4ea1c9"><span>🌊</span><span class="tile-badge">#2</span></div>
+        <div class="ex-body">
+          <h3>Promenade des Anglais &amp; Baie des Anges</h3>
+          <p>Die berühmte Uferpromenade, ideal für einen ruhigen Spaziergang oder Fahrradtour. Direkt an der Strecke Cagnes–Nizza, lässt sich gut mit Vieux Nice kombinieren.</p>
+          <p class="ex-meta">ca. 20 Min. (13 km) ab Cagnes-sur-Mer · kostenlos</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Promenade+des+Anglais+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#8a6d3a;--tile-b:#b5945a"><span>🎨</span><span class="tile-badge">#3</span></div>
+        <div class="ex-body">
+          <h3>Saint-Paul-de-Vence</h3>
+          <p>Ummauertes Künstlerdorf mit Galerien und Gassen, direkt daneben die Fondation Maeght (moderne Kunst im Grünen). Kompakt und gut zu Fuß machbar — auch für die Großmutter angenehm.</p>
+          <p class="ex-meta">ca. 20 Min. (12 km) ab Cagnes-sur-Mer · Dorf kostenlos, Fondation Maeght Eintritt</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Saint-Paul-de-Vence" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#6a5a9c;--tile-b:#9584c9"><span>⛪</span><span class="tile-badge">#4</span></div>
+        <div class="ex-body">
+          <h3>Vence</h3>
+          <p>Kleine Kathedralenstadt im Hinterland, bekannt für die von Matisse gestaltete Rosenkranzkapelle (Chapelle du Rosaire). Gut mit Saint-Paul-de-Vence zu einem Hinterland-Halbtag zu kombinieren.</p>
+          <p class="ex-meta">ca. 25 Min. (15 km) ab Cagnes-sur-Mer · Kapelle mit Eintritt</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Vence+France" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>⛵</span><span class="tile-badge">#5</span></div>
+        <div class="ex-body">
+          <h3>Antibes &amp; Vieil Antibes</h3>
+          <p>Ummauerte Altstadt, Marché Provençal (tgl. außer Mo), Port Vauban mit Superyachten, Picasso-Museum. Am nächsten am Ankerpunkt gelegen — guter erster oder letzter Tag.</p>
+          <p class="ex-meta">ca. 10–15 Min. (7 km) ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Vieil+Antibes" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🎬</span><span class="tile-badge">#6</span></div>
+        <div class="ex-body">
+          <h3>Cannes &amp; La Croisette</h3>
+          <p>Filmfestival-Flair, Boulevard am Meer, Altstadt Le Suquet. Achtung: 8.–13.9. läuft dort das Cannes Yachting Festival — direkt nach unserer Abreise, aber ggf. schon Aufbau/mehr Betrieb ab dem 5.–7.9.</p>
+          <p class="ex-meta">ca. 25–30 Min. (20 km) ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=La+Croisette+Cannes" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#9c1f3a;--tile-b:#c94f6a"><span>👑</span><span class="tile-badge">#7</span></div>
+        <div class="ex-body">
+          <h3>Monaco / Monte-Carlo</h3>
+          <p>Fürstenpalast, Ozeanografisches Museum, Casino-Platz, Fahrt selbst über die Küstenstraßen (Corniches) schon ein Erlebnis. Längster Ausflugstag im Programm — realistisch nur einmal einplanen.</p>
+          <p class="ex-meta">ca. 45–50 Min. (35 km) ab Cagnes-sur-Mer · Parken teuer, ÖPNV/Zug erwägen</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Monaco+Monte-Carlo" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🦅</span><span class="tile-badge">#8</span></div>
+        <div class="ex-body">
+          <h3>Èze</h3>
+          <p>Mittelalterliches „Adlerhorst"-Dorf hoch über dem Meer, spektakulärer Ausblick vom exotischen Garten oben im Ort. Steile Gassen — für die Großmutter in Maßen/mit Pausen planen.</p>
+          <p class="ex-meta">ca. 40 Min. (30 km) ab Cagnes-sur-Mer · Jardin Exotique mit Eintritt</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Eze+village+France" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>🍋</span><span class="tile-badge">#9</span></div>
+        <div class="ex-body">
+          <h3>Menton</h3>
+          <p>Belle-Époque-Altstadt an der italienischen Grenze, bekannt für Zitronen. Ruhiger als Nizza/Cannes, schöne Uferpromenade. Am weitesten weg — als ganzer Tag oder mit Monaco kombiniert einplanen.</p>
+          <p class="ex-meta">ca. 55–60 Min. (45 km) ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Menton+France" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>🌸</span><span class="tile-badge">#10</span></div>
+        <div class="ex-body">
+          <h3>Grasse</h3>
+          <p>Welthauptstadt des Parfums im Hinterland, Werksführungen bei Fragonard, Molinard oder Galimard. Lässt sich gut mit einem Provence-Weingut-Ausflug ins Var-Hinterland kombinieren.</p>
+          <p class="ex-meta">ca. 35 Min. (25 km) ab Cagnes-sur-Mer · Parfümerie-Führung meist kostenlos</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Grasse+parfumerie" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🏝️</span><span class="tile-badge">#11</span></div>
+        <div class="ex-body">
+          <h3>Cap d'Antibes</h3>
+          <p>Nobles Küstenviertel mit dem Sentier du Littoral (Küstenwanderweg), Villen und Buchten. Kurzer, aber sehr fotogener Zwischenstopp bei einem Antibes-Tag.</p>
+          <p class="ex-meta">ca. 15 Min. (10 km) ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Cap+d%27Antibes" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#1f7a3a;--tile-b:#4fa661"><span>🇮🇹</span><span class="tile-badge">#12</span></div>
+        <div class="ex-body">
+          <h3>Ventimiglia (Italien)</h3>
+          <p>Grenzausflug nach Italien — freitags großer Wochenmarkt an der Küste (nicht am 4.9., das ist ein Freitag: kurz gegenchecken, ob er läuft). Für Grenzgänger-Feeling und italienischen Espresso.</p>
+          <p class="ex-meta">ca. 65–70 Min. (50 km) ab Cagnes-sur-Mer · am Rand des 50-km-Radius</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Ventimiglia+mercato" target="_blank" rel="noopener">Google Maps ↗</a>
+        </div>
+      </article>
+
+    </div>
+    <p class="dim" style="font-size:12px;margin-top:16px">Entfernungen &amp; Fahrzeiten: grobe Schätzung nach Straßenverbindung, keine Live-Verkehrsdaten — vor der Fahrt kurz mit Google Maps/Waze gegenchecken. Quelle Sant Bertoumiéu/Yachting-Festival-Termin: <a href="https://www.nice.fr/agenda/" target="_blank" rel="noopener">nice.fr/agenda</a>, <a href="https://www.immosol.fr/blog/evenements-cannes/" target="_blank" rel="noopener">immosol.fr</a> — Stand 01.09.2026.</p>
+  </div>
+</section>
+
+<!-- ============ WEIN ============ -->
+<section class="page" id="page-wein">
+  <div class="page-header wrap">
+    <div class="eyebrow">Vor Ort</div>
+    <h1>Wein</h1>
+    <p class="sub">AOC Bellet — die kleine, feine Appellation direkt auf den Hügeln über Nizza — plus zwei landschaftlich beeindruckende Alternativen in der weiteren Provence (Var), falls ein ganzer Tag fürs Hinterland eingeplant wird.</p>
+  </div>
+  <div class="wrap">
+
+    <div class="info-box warn">
+      <strong>Wichtig für die Spontanplanung:</strong> AOC Bellet ist mit nur ca. 48 Hektar eine der kleinsten Appellationen Frankreichs — eine Handvoll Familienbetriebe auf den Hügeln über Nizza. Geführte Kellerbesichtigungen sind bei den meisten Domaines nur <strong>mit Online-Reservierung</strong> möglich; freie Verkostung im Verkaufsraum geht bei einigen (z. B. Château de Crémat) auch spontan während der Öffnungszeiten. Für zuverlässige aktuelle Öffnungszeiten am besten kurz vorher anrufen oder <a href="https://asncap.fr/vignerons-de-laoc-bellet/" target="_blank" rel="noopener">asncap.fr</a> prüfen.
+    </div>
+
+    <h2 style="margin-top:30px">AOC Bellet — Weingüter auf den Hügeln von Nizza</h2>
+    <div class="wine-grid">
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🏰</span></div>
+        <div class="ex-body">
+          <h3>Château de Crémat</h3>
+          <p>Neugotisches Schloss mit Rosengarten auf den Hügeln Crémat/Saint-Sauveur/Saquier, 14 ha Reben. Das bekannteste und touristisch am besten erschlossene Bellet-Gut.</p>
+          <p class="ex-meta">Mo–Sa 10:00–17:30 (Sa bis 17:00) · <strong>Verkostung ohne Anmeldung</strong> möglich · Führung 25–40 €/Person nur mit Online-Reservierung</p>
+          <div class="card-links">
+            <a class="btn" href="https://chateaucremat.com/en/oenotourisme-visites-chateau-aop-bellet-vin-de-provence-vignoble-chateau/" target="_blank" rel="noopener">Website ↗</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Cremat+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: chateaucremat.com · <span class="verified">live geprüft 01.09.2026</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>⛪</span></div>
+        <div class="ex-body">
+          <h3>Château de Bellet</h3>
+          <p>Namensgeber der Appellation seit dem 18. Jh., Verkostungsraum in einer profanierten Kapelle. Möglichkeit für Picknick im Weinberg (Mai–Sept.) oder Pétanque-Partie mit Glas Wein.</p>
+          <p class="ex-meta">Führungen Mo–Sa 11:00 / 14:00 / 15:30 Uhr, <strong>auf Reservierung</strong> (Mittagspause 12:30–14:00) · ca. 20 Min. von Nizza-Zentrum, 482 Chemin de Saquier</p>
+          <div class="card-links">
+            <a class="btn" href="https://www.chateaudebellet.com/visites-et-degustations/" target="_blank" rel="noopener">Website ↗</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Chateau+de+Bellet+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: chateaudebellet.com — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🌿</span></div>
+        <div class="ex-body">
+          <h3>Clos Saint-Vincent</h3>
+          <p>Bio &amp; biodynamisch bewirtschaftet, 6 ha am Süd-/Westhang des Collet des Fourniers. Rebsorten Rolle, Braquet, Folle Noire — sehr terroir-typisch. Neue Vinothek direkt an der „Route des vins de Nice".</p>
+          <p class="ex-meta">Saint-Roman de Bellet · Tel. +33 4 92 15 12 69 — Termin empfohlen</p>
+          <div class="card-links">
+            <a class="btn" href="https://www.clos-st-vincent.fr/" target="_blank" rel="noopener">Website ↗</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Clos+Saint-Vincent+Bellet+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: clos-st-vincent.fr, oenotourisme.com — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#8a6d3a;--tile-b:#b5945a"><span>🫒</span></div>
+        <div class="ex-body">
+          <h3>Domaine de Toasc</h3>
+          <p>8 ha Reben plus 2 ha Olivenhaine auf 15 ha Gesamtfläche, windige Lage mit Blick zum Meer. Wein wird von Sterne-Restaurants der Region und in Paris gelistet.</p>
+          <p class="ex-meta"><strong>Mo &amp; So geschlossen</strong> · 213 Chemin de Crémat, Nice · Tel. +33 4 92 15 14 14</p>
+          <div class="card-links">
+            <a class="btn" href="https://www.domainedetoasc.com/bellet/" target="_blank" rel="noopener">Website ↗</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Domaine+de+Toasc+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: domainedetoasc.com — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🌱</span></div>
+        <div class="ex-body">
+          <h3>Domaine de la Source</h3>
+          <p>Kleiner Familienbetrieb, 7 ha komplett biologisch bewirtschaftet, ohne Pestizide oder chemischen Dünger. Persönlicher, unaufgeregter Besuch abseits vom Château-Trubel.</p>
+          <p class="ex-meta">Termin vorab empfohlen — kein touristisches Standard-Programm</p>
+          <div class="card-links">
+            <a class="btn" href="https://domainedelasource.fr/" target="_blank" rel="noopener">Website ↗</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Domaine+de+la+Source+Bellet+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: domainedelasource.fr — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>🍇</span></div>
+        <div class="ex-body">
+          <h3>Domaine de Vinceline</h3>
+          <p>2007 von Vincent &amp; Céline Yerchoff gegründet (Name aus beiden Vornamen). Neben Bellet-Wein auch AOP „Olive de Nice" — beide Appellationen der Alpes-Maritimes auf einem Hof.</p>
+          <p class="ex-meta">Termin empfohlen</p>
+          <div class="card-links">
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Domaine+de+Vinceline+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: ASNCAP-Winzerliste — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#3a5a8a;--tile-b:#5c82b5"><span>🛣️</span></div>
+        <div class="ex-body">
+          <h3>Via Julia-Augusta</h3>
+          <p>Grundstück grenzt an die gleichnamige antike Römerstraße. Klassischer Ausbau, u. a. im Eichenfass — geschichtsträchtige Lage für alle, die Wein und Antike verbinden wollen.</p>
+          <p class="ex-meta">Termin empfohlen</p>
+          <div class="card-links">
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Via+Julia+Augusta+Bellet+Nice+vin" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: ASNCAP-Winzerliste — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>🏅</span></div>
+        <div class="ex-body">
+          <h3>Domaine Saint Jean</h3>
+          <p>Betrieb von Nathalie &amp; Jean-Patrick Pacioselli, seit 2013 bio-zertifiziert. Goldmedaille beim Concours Général Agricole Paris 2014 — solide Wahl für alle, die auf Bio-Zertifizierung Wert legen.</p>
+          <p class="ex-meta">Termin empfohlen</p>
+          <div class="card-links">
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Domaine+Saint+Jean+Bellet+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: ASNCAP-Winzerliste — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🍷</span></div>
+        <div class="ex-body">
+          <h3>Collet de Bovis</h3>
+          <p>Kleiner Bellet-Erzeuger, in der offiziellen ASNCAP-Winzerliste geführt. Zu diesem Gut ließen sich in der Kürze der Zeit keine Detailinfos zu Öffnungszeiten finden — vor Besuch unbedingt anrufen.</p>
+          <p class="ex-meta">Details unklar — telefonisch abklären</p>
+          <div class="card-links">
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Collet+de+Bovis+Bellet+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+          <p class="source-line">Quelle: ASNCAP-Winzerliste — <strong>Lücke:</strong> keine belastbaren Detailinfos gefunden.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <h2 style="margin-top:40px">Alternative: Côtes de Provence (Var) — mehr Auswahl, mehr Fahrzeit</h2>
+    <p class="sub">Für einen ganzen Weintag mit mehr Auswahl und offeneren Türen als im winzigen Bellet — dafür 1–1,5 Std. einfache Fahrt ins Var-Hinterland einplanen.</p>
+    <div class="wine-grid">
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>⛲</span></div>
+        <div class="ex-body">
+          <h3>Château Sainte Roseline</h3>
+          <p>Cru-Classé-Gut seit 1955, ganzjährig geführte Touren durch Keller, Kapelle und Kreuzgang — ca. 30.000 Besucher/Jahr, also touristisch gut eingespielt. Landschaftlich sehr schön bei Les Arcs-sur-Argens.</p>
+          <p class="ex-meta">ca. 1 Std. 15 (75 km) ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Chateau+Sainte+Roseline" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: oenotourisme.com — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🏛️</span></div>
+        <div class="ex-body">
+          <h3>Château Roubine</h3>
+          <p>Eines der ältesten Weingüter Frankreichs (14. Jh., einst Templerbesitz), zwischen Lorgues und Draguignan. Elegantes modernes Weingut inmitten historischer Weinberge.</p>
+          <p class="ex-meta">ca. 1 Std. 20 (80 km) ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Chateau+Roubine" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: detoursenfrance.fr — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+    </div>
+    <p class="dim" style="font-size:12px;margin-top:16px">Weitere Recherche-Quellen: <a href="https://asncap.fr/bellet/" target="_blank" rel="noopener">ASNCAP — Sommeliers Nice Côte d'Azur Provence</a>, <a href="https://www.winetourism.com/" target="_blank" rel="noopener">WineTourism.com</a>.</p>
+  </div>
+</section>
+
+<!-- ============ SECOND-HAND ============ -->
+<section class="page" id="page-secondhand">
+  <div class="page-header wrap">
+    <div class="eyebrow">Vor Ort</div>
+    <h1>Second-Hand &amp; Vintage</h1>
+    <p class="sub">Flohmärkte im genauen Reisezeitraum plus Vintage-/Second-Hand-Läden in Vieux Nice — kuratiert für den 16-Jährigen mit Vinted-Nebenjob.</p>
+  </div>
+  <div class="wrap">
+
+    <h2>Flohmärkte 3.–7.9.2026</h2>
+    <div class="wine-grid">
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🗄️</span></div>
+        <div class="ex-body">
+          <h3>Puces de Nice</h3>
+          <p>Der etablierte Antiquitäten- &amp; Trödelmarkt im Hafenviertel von Nizza — Dutzende feste Stände, jeden Werktag außer Sonntag/Montag geöffnet. Passt an <strong>jedem</strong> unserer Reisetage außer So 7.9.</p>
+          <p class="ex-meta">Rue Robilant, Port de Nice · Di–Sa 10:00–18:00</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Puces+de+Nice+Rue+Robilant" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: petitfute.co.uk, love-spots.com — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🧺</span></div>
+        <div class="ex-body">
+          <h3>Vide-grenier Bendejun</h3>
+          <p>Klassischer Dorf-Flohmarkt im Hinterland, für So 6.9. gelistet.</p>
+          <p class="ex-meta">So 6.9.2026 · Place du Centenaire, Bendejun · ca. 25 km ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Place+du+Centenaire+Bendejun" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: brocabrac.fr — <span class="verified">live geprüft 01.09.2026</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🧺</span></div>
+        <div class="ex-body">
+          <h3>Vide-greniers La Gaude</h3>
+          <p>Kleiner, gut erreichbarer Vide-grenier nahe am Ankerpunkt — mit Abstand der nächstgelegene Termin am 6.9.</p>
+          <p class="ex-meta">So 6.9.2026 · La Gaude (Ortszentrum) · ca. 8 km ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=La+Gaude+centre" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: brocabrac.fr — <span class="verified">live geprüft 01.09.2026</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>💿</span></div>
+        <div class="ex-body">
+          <h3>„Débarrasse vinyles" Antibes</h3>
+          <p>Spezial-Flohmarkt für Schallplatten/Vinyl in Antibes — ungewöhnlicher, aber evtl. genau das Richtige für den Vinted-Fokus auf besondere Fundstücke statt Standardware.</p>
+          <p class="ex-meta">So 6.9.2026 · La Petite Pinède, Antibes · ca. 12 km ab Cagnes-sur-Mer</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=La+Petite+Pinede+Antibes" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: brocabrac.fr — <span class="verified">live geprüft 01.09.2026</span></p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#9c1f3a;--tile-b:#c94f6a"><span>⚠️</span></div>
+        <div class="ex-body">
+          <h3>Vide-grenier Nice (Stadtgebiet)</h3>
+          <p>Für So 6.9. war laut Nutzer-Recherche auch ein Vide-grenier in Nizza selbst sowie ein Termin in Cagnes bekannt — bei der Live-Prüfung erschien einer der Nizza-Termine („Vide grenier des gazelles") als <strong>abgesagt</strong>, ein Cagnes-Termin ließ sich nicht eindeutig bestätigen.</p>
+          <p class="ex-meta">So 6.9.2026 · Ort unklar · <strong>vor Ort auf brocabrac.fr/vide-greniers.org gegenchecken</strong></p>
+          <a class="btn btn-outline" href="https://brocabrac.fr/06/nice/" target="_blank" rel="noopener">brocabrac.fr Nizza ↗</a>
+          <p class="source-line">Quelle: brocabrac.fr — <span class="verified">live geprüft 01.09.2026</span>, Status unsicher.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🌷</span></div>
+        <div class="ex-body">
+          <h3>Cours Saleya — Montags-Flohmarkt</h3>
+          <p>An Montagen weicht der Blumenmarkt auf dem Cours Saleya einem Antiquitäten-/Trödelmarkt. Fällt leider auf Mo 8.9. — <strong>einen Tag nach unserer Abreise</strong>, hier nur als Hintergrundwissen für die nächste Reise vermerkt.</p>
+          <p class="ex-meta">montags, nicht im Reisezeitraum</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Cours+Saleya+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: masdesoliviers-nice.com — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <h2 style="margin-top:40px">Vintage- &amp; Second-Hand-Läden in Vieux Nice</h2>
+    <div class="wine-grid">
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>👗</span></div>
+        <div class="ex-body">
+          <h3>Caprice Vintage Shop</h3>
+          <p>Buntes Sortiment von Kleidung bis Möbel, günstige Preise — guter Startpunkt für einen Vintage-Bummel durch die Altstadt.</p>
+          <p class="ex-meta">12 Rue Droite, Vieux Nice · Tel. 09 83 48 05 43</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Caprice+Vintage+Shop+12+Rue+Droite+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: pagesjaunes.fr — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>💎</span></div>
+        <div class="ex-body">
+          <h3>Nice ô Chineur</h3>
+          <p>Auf hochwertige Vintage-/Luxusstücke spezialisiert — für den geschulten Vinted-Blick interessant, um Marktpreise für gute Marken zu vergleichen.</p>
+          <p class="ex-meta">8 Rue Benoît Bunico, Vieux Nice</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Nice+o+Chineur+Rue+Benoit+Bunico" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: visitthefrenchriviera.com — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#3a5a8a;--tile-b:#5c82b5"><span>🛋️</span></div>
+        <div class="ex-body">
+          <h3>Bozar 2</h3>
+          <p>Kleines Dépôt-vente mitten in der Altstadt, gut für preiswerte Fundstücke abseits der Touristenroute.</p>
+          <p class="ex-meta">Rue Niepce, Vieux Nice · Tel. 04 93 85 53 45</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Bozar+2+Rue+Niepce+Nice" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: pagesjaunes.fr — Stand 01.09.2026, nicht live geprüft.</p>
+        </div>
+      </article>
+
+      <article class="ex-card">
+        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🚪</span></div>
+        <div class="ex-body">
+          <h3>Weitere Friperien, Rue Droite</h3>
+          <p>Die Rue Droite (Vieux Nice) ist die Second-Hand-Achse der Altstadt — auf dem Weg von Caprice Vintage Richtung Cours Saleya liegen mehrere kleinere Friperien zum Stöbern.</p>
+          <p class="ex-meta">Rue Droite, Vieux Nice — einfach entlangschlendern</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Rue+Droite+Nice+friperie" target="_blank" rel="noopener">Google Maps ↗</a>
+          <p class="source-line">Quelle: lebonbon.fr, riviera-city-guide.com — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+    </div>
+    <div class="info-box" style="margin-top:20px">💡 Auf südfranzösischen Vide-greniers wird meist erwartet, dass man handelt — für den Verkäufer-Blick des Sohnes ein guter Vergleichspunkt zu Vinted-Preisen. Bar zahlen, kleine Scheine mitnehmen.</div>
+  </div>
+</section>
+
+<!-- ============ GASTRO ============ -->
+<section class="page" id="page-gastro">
+  <div class="page-header wrap">
+    <div class="eyebrow">Vor Ort</div>
+    <h1>Gastro</h1>
+    <p class="sub">18 kuratierte Adressen aus einer größeren, separat gepflegten Recherche (93 Restaurants zwischen Nizza, Cagnes/Antibes und Cannes) — ausgewählt für alle drei Reisenden: bodenständig &amp; familientauglich UND ein besonderer Abend.</p>
+  </div>
+  <div class="wrap">
+    <div class="rest-items">
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🥘</span><div class="rc-rating">⭐ 4,7 (721)</div><div class="rc-price">100+ €</div></div>
+        <div class="rc-body">
+          <span class="for-tag special">Besonderer Abend</span><span class="for-tag papa">Vater</span>
+          <h4>Les Terraillers</h4>
+          <p class="rc-category">1 Michelin-Stern, mediterrane Küche in einer Töpferei aus dem 16. Jh. — seit 30 Jahren in Familienhand (heute Chef Michaël Fulci)</p>
+          <p class="rc-address">📍 11 Chem. Neuf, Biot</p>
+          <div class="rc-actions">
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Les+Terraillers+Biot" target="_blank" rel="noopener">Google Maps ↗</a>
+            <a class="btn btn-outline" href="https://www.lesterraillers.fr/en/" target="_blank" rel="noopener">Website ↗</a>
+          </div>
+          <p class="source-line">Quelle: Guide Michelin, restaurants-recherche.md — Stand 01.09.2026. Unbedingt vorab reservieren.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🍝</span><div class="rc-rating">⭐ 4,9 (353)</div><div class="rc-price">20–30 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag">Familie</span>
+          <h4>Restaurant Romania</h4>
+          <p class="rc-category">Gehobene Küche, sehr gute Bewertung bei moderatem Preis</p>
+          <p class="rc-address">📍 2594 RN 7, Villeneuve-Loubet</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Restaurant+Romania+Villeneuve-Loubet" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🌊</span><div class="rc-rating">⭐ 4,8 (391)</div><div class="rc-price">–</div></div>
+        <div class="rc-body">
+          <span class="for-tag oma">Großmutter</span>
+          <h4>Fleur de Sel</h4>
+          <p class="rc-category">Ruhige Lage im Dorfkern von Villeneuve-Loubet — gut für einen entspannten Abend ohne Trubel</p>
+          <p class="rc-address">📍 85 Mnt de la Bourgade, Villeneuve-Loubet</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Fleur+de+Sel+Villeneuve-Loubet" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🥪</span><div class="rc-rating">⭐ 4,7 (5.243)</div><div class="rc-price">10–20 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag sohn">Sohn</span><span class="for-tag">Schnell</span>
+          <h4>Lunicco</h4>
+          <p class="rc-category">Sandwiches im Einkaufszentrum Polygone Riviera — ideal für eine schnelle Pause zwischen Second-Hand-Shopping</p>
+          <p class="rc-address">📍 119 Av. des Alpes, Cagnes-sur-Mer</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Lunicco+Polygone+Riviera+Cagnes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#8a6d3a;--tile-b:#b5945a"><span>🍲</span><div class="rc-rating">⭐ 4,7 (872)</div><div class="rc-price">20–30 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag oma">Großmutter</span><span class="for-tag">Bodenständig</span>
+          <h4>Chez Palmyre</h4>
+          <p class="rc-category">Traditionelle, günstige Küche mitten in Vieux Nice — guter Stopp nach einem Bummel durch die Altstadt/Flohmarkt</p>
+          <p class="rc-address">📍 5 Rue Droite, Vieux Nice</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Chez+Palmyre+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#1c6e9c;--tile-b:#4ea1c9"><span>🏖️</span><div class="rc-rating">⭐ 4,6 (7.747)</div><div class="rc-price">30–90 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag">Familie</span>
+          <h4>Bocca Mar</h4>
+          <p class="rc-category">Strandlage direkt an der Promenade des Anglais, mediterrane Küche</p>
+          <p class="rc-address">📍 15 Prom. des Anglais, Nice</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Bocca+Mar+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#9c1f3a;--tile-b:#c94f6a"><span>🍷</span><div class="rc-rating">⭐ 4,9 (608)</div><div class="rc-price">40–90 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag papa">Vater</span>
+          <h4>l'Antidote</h4>
+          <p class="rc-category">Französische Küche, gute Weinauswahl — passt zum Wein-Interesse des Vaters für einen ruhigeren Abend in Nizza</p>
+          <p class="rc-address">📍 3 Rue Dalpozzo, Nice</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=l%27Antidote+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🍽️</span><div class="rc-rating">⭐ 4,8 (696)</div><div class="rc-price">40–50 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag">Besonders</span>
+          <h4>La Route du Miam</h4>
+          <p class="rc-category">Kleines, von außen unscheinbares Restaurant der Spitzenklasse in Nizza</p>
+          <p class="rc-address">📍 1 Rue Molière, Nice</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=La+Route+du+Miam+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🫒</span><div class="rc-rating">⭐ 4,7 (71)</div><div class="rc-price">20–30 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag oma">Großmutter</span>
+          <h4>Restaurant l'Authentique</h4>
+          <p class="rc-category">Unkompliziert, gutes Preis-Leistungs-Verhältnis in Biot — nahe an Les Terraillers, falls man den Ort sowieso ansteuert</p>
+          <p class="rc-address">📍 2559 Rte de Grasse, Biot</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Restaurant+l%27Authentique+Biot" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#1c6e9c;--tile-b:#4ea1c9"><span>🏝️</span><div class="rc-rating">⭐ 4,8 (180)</div><div class="rc-price">30–70 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag">Strand</span>
+          <h4>Napa – Restaurant &amp; Beach Club</h4>
+          <p class="rc-category">Strand-Lage in Cagnes-sur-Mer, entspannter Mittag mit Meerblick</p>
+          <p class="rc-address">📍 1 Rue de la Jetée, Cagnes-sur-Mer</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Napa+Restaurant+Beach+Club+Cagnes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🍽️</span><div class="rc-rating">⭐ 4,7 (1.039)</div><div class="rc-price">40–80 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag">Cannes-Tag</span>
+          <h4>UVA – restaurant cannes</h4>
+          <p class="rc-category">Gehobene französische Küche, guter Stopp bei einem Cannes-Ausflug</p>
+          <p class="rc-address">📍 13 Bd de la République, Cannes</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=UVA+restaurant+cannes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>☀️</span><div class="rc-rating">⭐ 4,8 (90)</div><div class="rc-price">20–30 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag oma">Großmutter</span>
+          <h4>Zenit' Restaurant</h4>
+          <p class="rc-category">Kleines, sehr gut bewertetes Lokal in Villeneuve-Loubet, ruhige Lage</p>
+          <p class="rc-address">📍 150 Rue du Vallon, Villeneuve-Loubet</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Zenit+Restaurant+Villeneuve-Loubet" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🥂</span><div class="rc-rating">⭐ 4,8 (1.001)</div><div class="rc-price">30–60 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag special">Besonderer Abend</span>
+          <h4>La Taille de Guêpe</h4>
+          <p class="rc-category">Romantisches, kleines Lokal mit kreativer französischer Küche in Antibes — Alternative zu Les Terraillers, wenn der Michelin-Stern-Termin nicht passt</p>
+          <p class="rc-address">📍 24 Rue de Fersen, Antibes</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=La+Taille+de+Guepe+Antibes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#3a5a8a;--tile-b:#5c82b5"><span>🥞</span><div class="rc-rating">⭐ 4,9 (262)</div><div class="rc-price">10–20 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag sohn">Sohn</span><span class="for-tag">Günstig</span>
+          <h4>Miam Antibes</h4>
+          <p class="rc-category">Herzhafte Crêpes, günstig und schnell — guter Snack-Stopp beim Antibes-Bummel</p>
+          <p class="rc-address">📍 6 Rue Thuret, Antibes</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Miam+Antibes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>🏴‍☠️</span><div class="rc-rating">⭐ 4,9 (953)</div><div class="rc-price">20–30 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag">Familie</span><span class="for-tag">Cannes-Tag</span>
+          <h4>Black Sails – A Pirate Tavern By Chef LeChat</h4>
+          <p class="rc-category">Verspieltes Piraten-Konzept in Cannes — bringt Abwechslung für alle Altersgruppen</p>
+          <p class="rc-address">📍 39 Rue Georges Clemenceau, Cannes</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Black+Sails+Pirate+Tavern+Cannes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🥡</span><div class="rc-rating">⭐ 5,0 (45)</div><div class="rc-price">10–20 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag sohn">Sohn</span><span class="for-tag">Günstig</span>
+          <h4>Le Five Cosy – Street Food Antibes</h4>
+          <p class="rc-category">Bestbewertetes Streetfood in Antibes, günstig und unkompliziert</p>
+          <p class="rc-address">📍 1465 Chem. des Combes, Antibes</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Le+Five+Cosy+Street+Food+Antibes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🐟</span><div class="rc-rating">⭐ 5,0 (212)</div><div class="rc-price">20–30 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag">Cannes-Tag</span>
+          <h4>L'Osmose Restaurant</h4>
+          <p class="rc-category">Bestbewertet in Cannes (La Bocca), moderat im Preis — Geheimtipp abseits der Croisette</p>
+          <p class="rc-address">📍 Centre Commercial Saint Jean, 938 Av. de la République, Cannes</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=L%27Osmose+Restaurant+Cannes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+      <article class="rc-card">
+        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>🍇</span><div class="rc-rating">⭐ 4,7 (1.176)</div><div class="rc-price">30–40 €</div></div>
+        <div class="rc-body">
+          <span class="for-tag papa">Vater</span>
+          <h4>Le terre del sud</h4>
+          <p class="rc-category">Italienische Küche in Nizza, gute Weinkarte, angemessene Portionsgrößen laut Bewertungen</p>
+          <p class="rc-address">📍 2 Rue Dalpozzo, Nice</p>
+          <div class="rc-actions"><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Le+terre+del+sud+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+          <p class="source-line">Quelle: restaurants-recherche.md (Google Maps) — Stand 01.09.2026.</p>
+        </div>
+      </article>
+
+    </div>
+    <p class="dim" style="font-size:12px;margin-top:16px">Vollständige Rohliste (93 Restaurants, drei Zonen): <code>Nizza Reiseführer/restaurants-recherche.md</code> im Fuerteventura-Projektordner. Weitere Quellen: <a href="https://guide.michelin.com/fr/fr/provence-alpes-cote-dazur/restaurants" target="_blank" rel="noopener">Guide Michelin Côte d'Azur</a>, <a href="https://lefooding.com/" target="_blank" rel="noopener">Le Fooding</a>.</p>
+  </div>
+</section>
+
+<!-- ============ KALENDER ============ -->
+<section class="page" id="page-kalender">
+  <div class="page-header wrap">
+    <div class="eyebrow">Vor Ort</div>
+    <h1>Kalender</h1>
+    <p class="sub">Alle Termine unserer 5 Tage (3.–7.9.2026) auf einen Blick. Anders als bei einer 13-Nächte-Reise ist hier fast alles terminkritisch — die Woche steht fest, nicht der Zeitraum.</p>
+  </div>
+  <div class="wrap">
+    <div class="cal-strip">
+      <div class="cal-day"><div class="cal-date">03.09.<span class="cal-weekday">Do</span></div><div class="cal-items">
+        <span class="cal-chip cal-chip-trip">✈️ Anreise / Ankunft</span>
+        <span class="cal-chip cal-chip-market">🗄️ Puces de Nice geöffnet</span>
+      </div></div>
+      <div class="cal-day"><div class="cal-date">04.09.<span class="cal-weekday">Fr</span></div><div class="cal-items">
+        <span class="cal-chip cal-chip-market">🗄️ Puces de Nice geöffnet</span>
+        <span class="cal-chip cal-chip-wine">🍷 guter Wein-/Bellet-Tag (Mo–Sa)</span>
+      </div></div>
+      <div class="cal-day"><div class="cal-date">05.09.<span class="cal-weekday">Sa</span></div><div class="cal-items">
+        <span class="cal-chip cal-chip-event">🎉 Sant Bertoumiéu, 10:00–23:30</span>
+        <span class="cal-chip cal-chip-market">🗄️ Puces de Nice geöffnet</span>
+        <span class="cal-chip cal-chip-wine">🍷 guter Wein-/Bellet-Tag</span>
+      </div></div>
+      <div class="cal-day"><div class="cal-date">06.09.<span class="cal-weekday">So</span></div><div class="cal-items">
+        <span class="cal-chip cal-chip-market">🧺 Vide-grenier Bendejun</span>
+        <span class="cal-chip cal-chip-market">🧺 Vide-greniers La Gaude</span>
+        <span class="cal-chip cal-chip-market">💿 Vinyl-Flohmarkt Antibes</span>
+        <span class="cal-chip cal-chip-note" style="background:var(--bad-bg);color:var(--bad)">⚠️ Puces de Nice: sonntags geschlossen</span>
+      </div></div>
+      <div class="cal-day"><div class="cal-date">07.09.<span class="cal-weekday">So</span></div><div class="cal-items">
+        <span class="cal-chip cal-chip-trip">🛫 Abreise / letzter Tag</span>
+      </div></div>
+    </div>
+    <p class="dim" style="font-size:12px;margin-top:10px">Quelle: nice.fr/agenda, brocabrac.fr — Stand 01.09.2026. Märkte &amp; Vide-greniers können kurzfristig ausfallen, siehe Second-Hand-Seite für Details.</p>
+
+    <section style="margin-top:40px">
+      <h2>Termine im Detail</h2>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-date">05.09.2026, 10:00–23:30</div>
+          <h3>Fête de la Sant Bertoumiéu</h3>
+          <p>Traditionelles Fest der Metropole Nizza auf der Promenade du Paillon: Bauernhof zum Anfassen, Ponys, Workshops, regionale Erzeuger. Abends (19:00–21:00) Balèti-Tanzkonzert mit der Gruppe Dous de Dous.</p>
+          <div class="event-foot"><span class="event-price">kostenlos</span><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Promenade+du+Paillon+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">Di–Sa, jeweils 10:00–18:00</div>
+          <h3>Puces de Nice</h3>
+          <p>Der feste Antiquitäten-/Trödelmarkt im Hafen — an vier von fünf Reisetagen geöffnet (nicht sonntags).</p>
+          <div class="event-foot"><span class="event-price">Eintritt frei</span><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Puces+de+Nice" target="_blank" rel="noopener">Google Maps ↗</a></div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">06.09.2026</div>
+          <h3>Vide-greniers-Sonntag</h3>
+          <p>Bendejun (Place du Centenaire), La Gaude und der Vinyl-Flohmarkt „Débarrasse vinyles" in Antibes (La Petite Pinède) — an einem Tag drei realistisch erreichbare Optionen.</p>
+          <div class="event-foot"><span class="event-price">Eintritt meist frei</span><a class="btn btn-outline" href="https://brocabrac.fr/06/cagnes-sur-mer/septembre/" target="_blank" rel="noopener">brocabrac.fr ↗</a></div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">ab 08.09.2026 (nach Abreise)</div>
+          <h3>Cannes Yachting Festival</h3>
+          <p>Große Bootsmesse am Vieux Port/Port Canto — beginnt erst am Tag nach unserer Abreise, kann aber schon in der Woche davor für mehr Betrieb/Aufbau in Cannes sorgen.</p>
+          <div class="event-foot"><span class="event-price">nicht im Reisezeitraum</span><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Vieux+Port+Cannes" target="_blank" rel="noopener">Google Maps ↗</a></div>
+        </div>
+      </div>
+      <p class="dim" style="margin-top:12px;font-size:12.5px">Für tagesaktuelle Änderungen kurz vor/während der Reise: <a href="https://www.nicematin.com/" target="_blank" rel="noopener">nicematin.com</a> und <a href="https://www.explorenicecotedazur.com/" target="_blank" rel="noopener">explorenicecotedazur.com</a> prüfen — siehe auch <a href="#links">Links &amp; Tipps</a>.</p>
+    </section>
+  </div>
+</section>
+
+<!-- ============ LINKS ============ -->
+<section class="page" id="page-links">
+  <div class="page-header wrap">
+    <div class="eyebrow">Sammlung</div>
+    <h1>Links &amp; Tipps</h1>
+    <p class="sub">Alle nützlichen Direktlinks für unterwegs an einem Ort — Wetter, Verkehr, Notfälle, Was-ist-heute-los.</p>
+  </div>
+  <div class="wrap">
+
+    <div class="links-box" style="margin-top:0">
+      <h2>🌤️ Live-Wetter Nizza/Cagnes-sur-Mer</h2>
+      <div class="weather-box">
+        <div class="weather-now" id="live-now-grid">
+          <div class="stat"><span class="n" id="live-temp">–</span><span class="l">Temperatur</span></div>
+          <div class="stat"><span class="n" id="live-wind">–</span><span class="l">Wind</span></div>
+          <div class="stat"><span class="n" id="live-humidity">–</span><span class="l">Luftfeuchte</span></div>
+          <div class="stat"><span class="n" id="live-uv">–</span><span class="l">UV-Index</span></div>
+        </div>
+        <div class="forecast-grid" id="live-forecast-grid"></div>
+        <p class="weather-status" id="live-now-status">Lade Live-Daten von Open-Meteo …</p>
+      </div>
+      <div class="link-grid">
+        <a class="link-card" href="https://meteofrance.com/previsions-meteo-france/nice/06000" target="_blank" rel="noopener"><strong>Météo-France Nizza</strong><span>Offizielle französische Vorhersage</span></a>
+        <a class="link-card" href="https://www.windfinder.com/forecast/nice" target="_blank" rel="noopener"><strong>Windfinder Nizza</strong><span>Wind- &amp; Wellenvorhersage</span></a>
+      </div>
+    </div>
+
+    <div class="links-box">
+      <h2>🚗 Parken &amp; ÖPNV</h2>
+      <div class="link-grid">
+        <a class="link-card" href="https://www.lignesdazur.com/" target="_blank" rel="noopener"><strong>Lignes d'Azur</strong><span>Bus &amp; Tram in der Metropole Nizza</span></a>
+        <a class="link-card" href="https://www.ter.sncf.com/sud-provence-alpes-cote-d-azur" target="_blank" rel="noopener"><strong>TER Sud PACA / Zou!</strong><span>Regionalbahn Cannes–Nizza–Menton–Ventimiglia, günstiger als Parken</span></a>
+      </div>
+      <div class="info-box" style="margin-top:14px">
+        <strong>Parken ist entlang der Küste knapp &amp; teuer</strong> — in Antibes kostet Tiefgaragen-Parken ca. 1,50–2,50 €/Std., die Altstadt ist praktisch autofrei (Parkhaus + Fußweg). In Nizza sind Pont Michel/Vauban gut für die Altstadt, füllen sich in der Hauptsaison aber schnell. Für Cannes/Monaco/Menton lohnt oft die <strong>Zou!-Regionalbahn</strong> statt Parkplatzsuche — die Bahnlinie verläuft direkt an der Küste entlang.
+      </div>
+    </div>
+
+    <div class="links-box">
+      <h2>📰 Was ist heute los?</h2>
+      <p class="sub">Beste Reihenfolge für Tagesaktuelles vor Ort — erst offiziell/Presse, dann Community, zuletzt Social Media.</p>
+      <div class="insider-list" style="margin-top:0">
+        <div class="insider-row"><span class="insider-n">1</span><div class="insider-body"><strong>Nice-Matin</strong><p>Regionale Tageszeitung — aktuellste Quelle für kurzfristige Änderungen, Events, Verkehr</p></div></div>
+        <div class="insider-row"><span class="insider-n">2</span><div class="insider-body"><strong>Explore Nice Côte d'Azur</strong><p>Offizieller Tourismusverband — Veranstaltungskalender, Produzenten, Weingüter</p></div></div>
+        <div class="insider-row"><span class="insider-n">3</span><div class="insider-body"><strong>Office de Tourisme Antibes/Cannes/Cagnes-sur-Mer/Monaco/Menton</strong><p>Für Termine außerhalb von Nizza jeweils die lokale Gemeindeseite prüfen</p></div></div>
+        <div class="insider-row"><span class="insider-n">4</span><div class="insider-body"><strong>TripAdvisor French Riviera Forum</strong><p>Aktuelle Reisendenfragen &amp; -tipps aus erster Hand</p></div></div>
+        <div class="insider-row"><span class="insider-n">5</span><div class="insider-body"><strong>Tribords.com</strong><p>Lifestyle-„Bons Plans"-Portal für die Côte d'Azur</p></div></div>
+        <div class="insider-row"><span class="insider-n">6</span><div class="insider-body"><strong>Instagram-Accounts</strong><p>@journaldunenicoise, @whataboutnice, @maudinette, @misterrivierablog, @lemalefrancais — für spontane Insider-Tipps</p></div></div>
+      </div>
+      <div class="link-grid" style="margin-top:14px">
+        <a class="link-card" href="https://www.nicematin.com/" target="_blank" rel="noopener"><strong>Nice-Matin</strong><span>Regionale Tageszeitung</span></a>
+        <a class="link-card" href="https://www.explorenicecotedazur.com/" target="_blank" rel="noopener"><strong>Explore Nice Côte d'Azur</strong><span>Offizieller Tourismusverband</span></a>
+        <a class="link-card" href="https://www.tripadvisor.com/ShowForum-g187234-i35-Nice_French_Riviera_Cote_d_Azur_Provence_Alpes_Cote_d_Azur.html" target="_blank" rel="noopener"><strong>TripAdvisor French Riviera Forum</strong><span>Community-Tipps aus erster Hand</span></a>
+        <a class="link-card" href="https://tribords.com/" target="_blank" rel="noopener"><strong>Tribords.com</strong><span>Lifestyle-Bons-Plans-Portal</span></a>
+      </div>
+    </div>
+
+    <div class="links-box">
+      <h2>🍷 Wein-Quellen</h2>
+      <div class="link-grid">
+        <a class="link-card" href="https://asncap.fr/" target="_blank" rel="noopener"><strong>ASNCAP</strong><span>Sommeliers Nice Côte d'Azur Provence — offizielle Winzerliste AOC Bellet</span></a>
+        <a class="link-card" href="https://www.winetourism.com/" target="_blank" rel="noopener"><strong>WineTourism.com</strong><span>Buchbare Weingutbesuche &amp; Touren</span></a>
+      </div>
+    </div>
+
+    <div class="links-box">
+      <h2>🍽️ Gastro-Quellen</h2>
+      <div class="link-grid">
+        <a class="link-card" href="https://guide.michelin.com/fr/fr/provence-alpes-cote-dazur/restaurants" target="_blank" rel="noopener"><strong>Guide Michelin Côte d'Azur</strong><span>Sterne- &amp; Bib-Gourmand-Adressen</span></a>
+        <a class="link-card" href="https://lefooding.com/" target="_blank" rel="noopener"><strong>Le Fooding</strong><span>Unabhängiger, unkonventioneller Restaurantguide</span></a>
+      </div>
+    </div>
+
+    <div class="links-box">
+      <h2>👖 Second-Hand-Quellen</h2>
+      <div class="link-grid">
+        <a class="link-card" href="https://vide-greniers.org/06-Alpes-Maritimes" target="_blank" rel="noopener"><strong>vide-greniers.org</strong><span>Größte Termindatenbank für Flohmärkte</span></a>
+        <a class="link-card" href="https://brocabrac.fr/06/" target="_blank" rel="noopener"><strong>brocabrac.fr</strong><span>Alternative Termindatenbank, gut gepflegt</span></a>
+        <a class="link-card" href="https://www.agendoo.fr/06-alpes-maritimes" target="_blank" rel="noopener"><strong>agendoo.fr</strong><span>Weitere Terminübersicht Alpes-Maritimes</span></a>
+      </div>
+    </div>
+
+    <div class="links-box">
+      <h2>🚨 Notfall &amp; Praktisches</h2>
+      <div class="link-grid">
+        <a class="link-card" href="tel:112"><strong>Notruf: 112</strong><span>EU-weiter Notruf – Polizei, Feuerwehr, Rettungsdienst</span></a>
+        <a class="link-card" href="tel:15"><strong>SAMU: 15</strong><span>Medizinischer Notdienst (Frankreich)</span></a>
+        <a class="link-card" href="tel:17"><strong>Police: 17</strong><span>Polizei-Notruf (Frankreich)</span></a>
+        <a class="link-card" href="tel:18"><strong>Pompiers: 18</strong><span>Feuerwehr (Frankreich)</span></a>
+      </div>
+      <p class="dim" style="margin-top:10px;font-size:12.5px">Großmutter wohnt vor Ort — im Zweifel ist sie selbst die beste Quelle für lokale Nummern (Hausarzt, Apotheke).</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  Nizza &amp; Côte d'Azur 2026 — Strukturtest der Fuerteventura-Reiseführer-Vorlage · Stand der Recherche: 01.09.2026
+</footer>
+
+<script>
+  var pages = ['home','ausfluege','wein','secondhand','gastro','kalender','links'];
+  function showPage(id){
+    if (pages.indexOf(id) === -1) id = 'home';
+    pages.forEach(function(p){
+      var el = document.getElementById('page-'+p);
+      if (el) el.classList.toggle('active', p===id);
+    });
+    document.querySelectorAll('.nav-link').forEach(function(a){
+      var isActive = a.getAttribute('data-page')===id;
+      a.classList.toggle('active', isActive);
+    });
+    window.scrollTo(0,0);
+  }
+  function go(hash){
+    hash = (hash||'').replace('#','');
+    showPage(hash || 'home');
+  }
+  window.addEventListener('hashchange', function(){ go(location.hash); });
+  go(location.hash);
+
+  // ---- countdown to 2026-09-03 00:00 local ----
+  function pad(n){ return n<10 ? '0'+n : ''+n; }
+  var TRIP_START = new Date('2026-09-03T00:00:00');
+  function tickCountdown(){
+    var now = new Date();
+    var diff = TRIP_START - now;
+    if (diff < 0) diff = 0;
+    var days = Math.floor(diff / 86400000);
+    var hours = Math.floor((diff % 86400000) / 3600000);
+    var mins = Math.floor((diff % 3600000) / 60000);
+    document.getElementById('cd-days').textContent = days;
+    document.getElementById('cd-hours').textContent = pad(hours);
+    document.getElementById('cd-mins').textContent = pad(mins);
+  }
+  tickCountdown();
+  setInterval(tickCountdown, 30000);
+
+  // ---- live weather (Open-Meteo, kein API-Key nötig) — Cagnes-sur-Mer/Villeneuve-Loubet ----
+  var WMO_ICON = {0:'☀️',1:'🌤️',2:'⛅',3:'☁️',45:'🌫️',48:'🌫️',51:'🌦️',53:'🌦️',55:'🌦️',61:'🌧️',63:'🌧️',65:'🌧️',71:'🌨️',73:'🌨️',75:'🌨️',80:'🌦️',81:'🌧️',82:'⛈️',95:'⛈️',96:'⛈️',99:'⛈️'};
+  var WEEKDAY_SHORT = ['So','Mo','Di','Mi','Do','Fr','Sa'];
+  function loadLiveWeather(){
+    var statusEl = document.getElementById('live-now-status');
+    if (!statusEl) return;
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=43.6647&longitude=7.1489&current=temperature_2m,wind_speed_10m,relative_humidity_2m,uv_index&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&forecast_days=5&timezone=Europe%2FParis')
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        var c = d.current;
+        document.getElementById('live-temp').textContent = Math.round(c.temperature_2m) + '°C';
+        document.getElementById('live-wind').textContent = Math.round(c.wind_speed_10m) + ' km/h';
+        document.getElementById('live-humidity').textContent = c.relative_humidity_2m + '%';
+        document.getElementById('live-uv').textContent = c.uv_index;
+        var t = new Date(c.time);
+        statusEl.textContent = 'Live-Daten von Open-Meteo, Stand ' + pad(t.getHours()) + ':' + pad(t.getMinutes()) + ' Uhr Ortszeit.';
+        var fc = document.getElementById('live-forecast-grid');
+        fc.innerHTML = '';
+        for (var i=0;i<d.daily.time.length;i++){
+          var dt = new Date(d.daily.time[i]+'T12:00:00');
+          var icon = WMO_ICON[d.daily.weather_code[i]] || '🌡️';
+          var div = document.createElement('div');
+          div.className = 'fc-day';
+          div.innerHTML = '<div class="fc-date">'+WEEKDAY_SHORT[dt.getDay()]+' '+pad(dt.getDate())+'.'+pad(dt.getMonth()+1)+'.</div>'+
+            '<div class="fc-icon">'+icon+'</div>'+
+            '<div class="fc-temp">'+Math.round(d.daily.temperature_2m_max[i])+'° / '+Math.round(d.daily.temperature_2m_min[i])+'°</div>';
+          fc.appendChild(div);
+        }
+      })
+      .catch(function(){ statusEl.textContent = 'Live-Wetter konnte nicht geladen werden — siehe Météo-France-Link unten.'; });
+  }
+  loadLiveWeather();
+</script>
+</body>
+</html>
