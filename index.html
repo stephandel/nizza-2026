@@ -216,6 +216,11 @@ details[open] summary::before { content: "− "; }
 .info-box.warn strong { color: var(--warn); }
 
 footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12px; color: var(--ink-dim); }
+.photo-credits { font-size: 12px; color: var(--ink-dim); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; }
+.photo-credits summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+.photo-credits ul { margin: 10px 0 0; padding-left: 18px; }
+.photo-credits li { margin-bottom: 4px; }
+.photo-credits a { color: var(--teal); }
 </style>
 </head>
 <body>
@@ -254,16 +259,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
 
   <div class="home-body">
     <div class="wrap">
-      <div class="eyebrow">Für wen</div>
-      <h2>Drei sehr unterschiedliche Interessen, ein Auto</h2>
-      <ul class="steps">
-        <li><strong>Weinliebhaber</strong> — will verkosten <em>und</em> schöne Weinlagen sehen, nicht nur Termine abklappern.</li>
-        <li><strong>Vintage- &amp; Streetwear-Fan</strong> — sucht Flohmärkte, Second-Hand-Läden, Insta-taugliche Ecken.</li>
-        <li><strong>Ortskundig</strong> — wohnt vor Ort, gut zu Fuß unterwegs, kennt die Gegend schon gut.</li>
-      </ul>
-      <p class="sub">Fünf Tage, ein Auto, drei sehr unterschiedliche Interessen — das heißt bewusst <strong>weniger Ziele pro Tag</strong>, dafür in Ruhe. Diese Seite bündelt kuratierte Auswahllisten statt Vollständigkeit.</p>
-
-      <div class="eyebrow" style="margin-top:36px">Schnellzugriff</div>
+      <div class="eyebrow">Schnellzugriff</div>
       <div class="quicknav">
         <a class="qn-card" href="#ausfluege"><span class="qn-emoji">🏛️</span><h3>Ausflüge &amp; Highlights</h3><p>Top-Ziele im 30–50-km-Radius, mit Fahrzeit ab Cagnes-sur-Mer</p></a>
         <a class="qn-card" href="#wein"><span class="qn-emoji">🍷</span><h3>Wein</h3><p>9 AOC-Bellet-Weingüter in Nizza + Provence-Alternativen</p></a>
@@ -305,7 +301,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
     <div class="excursion-grid">
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🏛️</span><span class="tile-badge">#1</span></div>
+        <div class="tile-media" style="background-image:url('images/vieux-nice-cours-saleya.jpg');background-size:cover;background-position:center;--tile-a:#0f6e76;--tile-b:#1c9aa3"><span class="tile-badge">#1</span></div>
         <div class="ex-body">
           <h3>Vieux Nice &amp; Cours Saleya</h3>
           <p>Altstadtgassen, der tägliche Blumen-/Gemüsemarkt (Di–So) und abends Bars &amp; Socca-Stände. Fußläufig gut für alle drei — auch für die Großmutter angenehm, da flach und schattig.</p>
@@ -315,7 +311,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#1c6e9c;--tile-b:#4ea1c9"><span>🌊</span><span class="tile-badge">#2</span></div>
+        <div class="tile-media" style="background-image:url('images/promenade-des-anglais.jpg');background-size:cover;background-position:center;--tile-a:#1c6e9c;--tile-b:#4ea1c9"><span class="tile-badge">#2</span></div>
         <div class="ex-body">
           <h3>Promenade des Anglais &amp; Baie des Anges</h3>
           <p>Die berühmte Uferpromenade, ideal für einen ruhigen Spaziergang oder Fahrradtour. Direkt an der Strecke Cagnes–Nizza, lässt sich gut mit Vieux Nice kombinieren.</p>
@@ -325,7 +321,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#8a6d3a;--tile-b:#b5945a"><span>🎨</span><span class="tile-badge">#3</span></div>
+        <div class="tile-media" style="background-image:url('images/saint-paul-de-vence.jpg');background-size:cover;background-position:center;--tile-a:#8a6d3a;--tile-b:#b5945a"><span class="tile-badge">#3</span></div>
         <div class="ex-body">
           <h3>Saint-Paul-de-Vence</h3>
           <p>Ummauertes Künstlerdorf mit Galerien und Gassen, direkt daneben die Fondation Maeght (moderne Kunst im Grünen). Kompakt und gut zu Fuß machbar — auch für die Großmutter angenehm.</p>
@@ -335,7 +331,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#6a5a9c;--tile-b:#9584c9"><span>⛪</span><span class="tile-badge">#4</span></div>
+        <div class="tile-media" style="background-image:url('images/vence.jpg');background-size:cover;background-position:center;--tile-a:#6a5a9c;--tile-b:#9584c9"><span class="tile-badge">#4</span></div>
         <div class="ex-body">
           <h3>Vence</h3>
           <p>Kleine Kathedralenstadt im Hinterland, bekannt für die von Matisse gestaltete Rosenkranzkapelle (Chapelle du Rosaire). Gut mit Saint-Paul-de-Vence zu einem Hinterland-Halbtag zu kombinieren.</p>
@@ -345,7 +341,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>⛵</span><span class="tile-badge">#5</span></div>
+        <div class="tile-media" style="background-image:url('images/antibes-vieil-antibes.jpg');background-size:cover;background-position:center;--tile-a:#0f6e76;--tile-b:#1c9aa3"><span class="tile-badge">#5</span></div>
         <div class="ex-body">
           <h3>Antibes &amp; Vieil Antibes</h3>
           <p>Ummauerte Altstadt, Marché Provençal (tgl. außer Mo), Port Vauban mit Superyachten, Picasso-Museum. Am nächsten am Ankerpunkt gelegen — guter erster oder letzter Tag.</p>
@@ -355,7 +351,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🎬</span><span class="tile-badge">#6</span></div>
+        <div class="tile-media" style="background-image:url('images/cannes-la-croisette.jpg');background-size:cover;background-position:center;--tile-a:#b5741f;--tile-b:#d99b45"><span class="tile-badge">#6</span></div>
         <div class="ex-body">
           <h3>Cannes &amp; La Croisette</h3>
           <p>Filmfestival-Flair, Boulevard am Meer, Altstadt Le Suquet. Achtung: 8.–13.9. läuft dort das Cannes Yachting Festival — direkt nach unserer Abreise, aber ggf. schon Aufbau/mehr Betrieb ab dem 5.–7.9.</p>
@@ -365,7 +361,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#9c1f3a;--tile-b:#c94f6a"><span>👑</span><span class="tile-badge">#7</span></div>
+        <div class="tile-media" style="background-image:url('images/monaco-monte-carlo.jpg');background-size:cover;background-position:center;--tile-a:#9c1f3a;--tile-b:#c94f6a"><span class="tile-badge">#7</span></div>
         <div class="ex-body">
           <h3>Monaco / Monte-Carlo</h3>
           <p>Fürstenpalast, Ozeanografisches Museum, Casino-Platz, Fahrt selbst über die Küstenstraßen (Corniches) schon ein Erlebnis. Längster Ausflugstag im Programm — realistisch nur einmal einplanen.</p>
@@ -375,7 +371,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🦅</span><span class="tile-badge">#8</span></div>
+        <div class="tile-media" style="background-image:url('images/eze-village.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"><span class="tile-badge">#8</span></div>
         <div class="ex-body">
           <h3>Èze</h3>
           <p>Mittelalterliches „Adlerhorst"-Dorf hoch über dem Meer, spektakulärer Ausblick vom exotischen Garten oben im Ort. Steile Gassen — für die Großmutter in Maßen/mit Pausen planen.</p>
@@ -385,7 +381,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>🍋</span><span class="tile-badge">#9</span></div>
+        <div class="tile-media" style="background-image:url('images/menton.jpg');background-size:cover;background-position:center;--tile-a:#c9a13a;--tile-b:#e6c66a"><span class="tile-badge">#9</span></div>
         <div class="ex-body">
           <h3>Menton</h3>
           <p>Belle-Époque-Altstadt an der italienischen Grenze, bekannt für Zitronen. Ruhiger als Nizza/Cannes, schöne Uferpromenade. Am weitesten weg — als ganzer Tag oder mit Monaco kombiniert einplanen.</p>
@@ -395,7 +391,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>🌸</span><span class="tile-badge">#10</span></div>
+        <div class="tile-media" style="background-image:url('images/grasse.jpg');background-size:cover;background-position:center;--tile-a:#8a4a9c;--tile-b:#b578c9"><span class="tile-badge">#10</span></div>
         <div class="ex-body">
           <h3>Grasse</h3>
           <p>Welthauptstadt des Parfums im Hinterland, Werksführungen bei Fragonard, Molinard oder Galimard. Lässt sich gut mit einem Provence-Weingut-Ausflug ins Var-Hinterland kombinieren.</p>
@@ -405,7 +401,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🏝️</span><span class="tile-badge">#11</span></div>
+        <div class="tile-media" style="background-image:url('images/cap-dantibes.jpg');background-size:cover;background-position:center;--tile-a:#0f6e76;--tile-b:#1c9aa3"><span class="tile-badge">#11</span></div>
         <div class="ex-body">
           <h3>Cap d'Antibes</h3>
           <p>Nobles Küstenviertel mit dem Sentier du Littoral (Küstenwanderweg), Villen und Buchten. Kurzer, aber sehr fotogener Zwischenstopp bei einem Antibes-Tag.</p>
@@ -415,7 +411,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#1f7a3a;--tile-b:#4fa661"><span>🇮🇹</span><span class="tile-badge">#12</span></div>
+        <div class="tile-media" style="background-image:url('images/ventimiglia.jpg');background-size:cover;background-position:center;--tile-a:#1f7a3a;--tile-b:#4fa661"><span class="tile-badge">#12</span></div>
         <div class="ex-body">
           <h3>Ventimiglia (Italien)</h3>
           <p>Grenzausflug nach Italien — freitags großer Wochenmarkt an der Küste (nicht am 4.9., das ist ein Freitag: kurz gegenchecken, ob er läuft). Für Grenzgänger-Feeling und italienischen Espresso.</p>
@@ -451,7 +447,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
     <div class="wine-grid">
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🏰</span></div>
+        <div class="tile-media" style="background-image:url('images/chateau-de-cremat.jpg');background-size:cover;background-position:center;--tile-a:#6a1f2e;--tile-b:#9c4a5c"></div>
         <div class="ex-body">
           <h3>Château de Crémat</h3>
           <p>Neugotisches Schloss mit Rosengarten auf den Hügeln Crémat/Saint-Sauveur/Saquier, 14 ha Reben. Das bekannteste und touristisch am besten erschlossene Bellet-Gut.</p>
@@ -465,7 +461,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>⛪</span></div>
+        <div class="tile-media" style="background-image:url('images/chateau-de-bellet.jpg');background-size:cover;background-position:center;--tile-a:#6a1f2e;--tile-b:#9c4a5c"></div>
         <div class="ex-body">
           <h3>Château de Bellet</h3>
           <p>Namensgeber der Appellation seit dem 18. Jh., Verkostungsraum in einer profanierten Kapelle. Möglichkeit für Picknick im Weinberg (Mai–Sept.) oder Pétanque-Partie mit Glas Wein.</p>
@@ -479,7 +475,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🌿</span></div>
+        <div class="tile-media" style="background-image:url('images/clos-saint-vincent.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"></div>
         <div class="ex-body">
           <h3>Clos Saint-Vincent</h3>
           <p>Bio &amp; biodynamisch bewirtschaftet, 6 ha am Süd-/Westhang des Collet des Fourniers. Rebsorten Rolle, Braquet, Folle Noire — sehr terroir-typisch. Neue Vinothek direkt an der „Route des vins de Nice".</p>
@@ -493,7 +489,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#8a6d3a;--tile-b:#b5945a"><span>🫒</span></div>
+        <div class="tile-media" style="background-image:url('images/domaine-de-toasc.jpg');background-size:cover;background-position:center;--tile-a:#8a6d3a;--tile-b:#b5945a"></div>
         <div class="ex-body">
           <h3>Domaine de Toasc</h3>
           <p>8 ha Reben plus 2 ha Olivenhaine auf 15 ha Gesamtfläche, windige Lage mit Blick zum Meer. Wein wird von Sterne-Restaurants der Region und in Paris gelistet.</p>
@@ -507,7 +503,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🌱</span></div>
+        <div class="tile-media" style="background-image:url('images/domaine-de-la-source.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"></div>
         <div class="ex-body">
           <h3>Domaine de la Source</h3>
           <p>Kleiner Familienbetrieb, 7 ha komplett biologisch bewirtschaftet, ohne Pestizide oder chemischen Dünger. Persönlicher, unaufgeregter Besuch abseits vom Château-Trubel.</p>
@@ -521,7 +517,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>🍇</span></div>
+        <div class="tile-media" style="background-image:url('images/domaine-de-vinceline.jpg');background-size:cover;background-position:center;--tile-a:#8a4a9c;--tile-b:#b578c9"></div>
         <div class="ex-body">
           <h3>Domaine de Vinceline</h3>
           <p>2007 von Vincent &amp; Céline Yerchoff gegründet (Name aus beiden Vornamen). Neben Bellet-Wein auch AOP „Olive de Nice" — beide Appellationen der Alpes-Maritimes auf einem Hof.</p>
@@ -534,7 +530,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#3a5a8a;--tile-b:#5c82b5"><span>🛣️</span></div>
+        <div class="tile-media" style="background-image:url('images/via-julia-augusta.jpg');background-size:cover;background-position:center;--tile-a:#3a5a8a;--tile-b:#5c82b5"></div>
         <div class="ex-body">
           <h3>Via Julia-Augusta</h3>
           <p>Grundstück grenzt an die gleichnamige antike Römerstraße. Klassischer Ausbau, u. a. im Eichenfass — geschichtsträchtige Lage für alle, die Wein und Antike verbinden wollen.</p>
@@ -547,7 +543,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>🏅</span></div>
+        <div class="tile-media" style="background-image:url('images/domaine-saint-jean.jpg');background-size:cover;background-position:center;--tile-a:#c9a13a;--tile-b:#e6c66a"></div>
         <div class="ex-body">
           <h3>Domaine Saint Jean</h3>
           <p>Betrieb von Nathalie &amp; Jean-Patrick Pacioselli, seit 2013 bio-zertifiziert. Goldmedaille beim Concours Général Agricole Paris 2014 — solide Wahl für alle, die auf Bio-Zertifizierung Wert legen.</p>
@@ -560,7 +556,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🍷</span></div>
+        <div class="tile-media" style="background-image:url('images/collet-de-bovis.jpg');background-size:cover;background-position:center;--tile-a:#6a1f2e;--tile-b:#9c4a5c"></div>
         <div class="ex-body">
           <h3>Collet de Bovis</h3>
           <p>Kleiner Bellet-Erzeuger, in der offiziellen ASNCAP-Winzerliste geführt. Zu diesem Gut ließen sich in der Kürze der Zeit keine Detailinfos zu Öffnungszeiten finden — vor Besuch unbedingt anrufen.</p>
@@ -579,7 +575,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
     <div class="wine-grid">
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>⛲</span></div>
+        <div class="tile-media" style="background-image:url('images/chateau-sainte-roseline.jpg');background-size:cover;background-position:center;--tile-a:#6a1f2e;--tile-b:#9c4a5c"></div>
         <div class="ex-body">
           <h3>Château Sainte Roseline</h3>
           <p>Cru-Classé-Gut seit 1955, ganzjährig geführte Touren durch Keller, Kapelle und Kreuzgang — ca. 30.000 Besucher/Jahr, also touristisch gut eingespielt. Landschaftlich sehr schön bei Les Arcs-sur-Argens.</p>
@@ -590,7 +586,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🏛️</span></div>
+        <div class="tile-media" style="background-image:url('images/chateau-roubine.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"></div>
         <div class="ex-body">
           <h3>Château Roubine</h3>
           <p>Eines der ältesten Weingüter Frankreichs (14. Jh., einst Templerbesitz), zwischen Lorgues und Draguignan. Elegantes modernes Weingut inmitten historischer Weinberge.</p>
@@ -618,7 +614,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
     <div class="wine-grid">
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🗄️</span></div>
+        <div class="tile-media" style="background-image:url('images/puces-de-nice.jpg');background-size:cover;background-position:center;--tile-a:#0f6e76;--tile-b:#1c9aa3"></div>
         <div class="ex-body">
           <h3>Puces de Nice</h3>
           <p>Der etablierte Antiquitäten- &amp; Trödelmarkt im Hafenviertel von Nizza — Dutzende feste Stände, jeden Werktag außer Sonntag/Montag geöffnet. Passt an <strong>3.–5.9.</strong> (Do–Sa), <strong>nicht am 6.9. (So) und 7.9. (Mo)</strong>.</p>
@@ -629,7 +625,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🧺</span></div>
+        <div class="tile-media" style="background-image:url('images/vide-grenier-village.jpg');background-size:cover;background-position:center;--tile-a:#b5741f;--tile-b:#d99b45"></div>
         <div class="ex-body">
           <h3>Vide-grenier Bendejun</h3>
           <p>Klassischer Dorf-Flohmarkt im Hinterland, für So 6.9. gelistet.</p>
@@ -640,7 +636,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🧺</span></div>
+        <div class="tile-media" style="background-image:url('images/vide-grenier-la-gaude.jpg');background-size:cover;background-position:center;--tile-a:#b5741f;--tile-b:#d99b45"></div>
         <div class="ex-body">
           <h3>Vide-greniers La Gaude</h3>
           <p>Kleiner, gut erreichbarer Vide-grenier nahe am Ankerpunkt — mit Abstand der nächstgelegene Termin am 6.9.</p>
@@ -651,7 +647,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>💿</span></div>
+        <div class="tile-media" style="background-image:url('images/vinyl-market-antibes.jpg');background-size:cover;background-position:center;--tile-a:#8a4a9c;--tile-b:#b578c9"></div>
         <div class="ex-body">
           <h3>„Débarrasse vinyles" Antibes</h3>
           <p>Spezial-Flohmarkt für Schallplatten/Vinyl in Antibes — ungewöhnlicher, aber evtl. genau das Richtige für den Vinted-Fokus auf besondere Fundstücke statt Standardware.</p>
@@ -662,7 +658,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#9c1f3a;--tile-b:#c94f6a"><span>⚠️</span></div>
+        <div class="tile-media" style="background-image:url('images/vide-grenier-nice-stadtgebiet.jpg');background-size:cover;background-position:center;--tile-a:#9c1f3a;--tile-b:#c94f6a"></div>
         <div class="ex-body">
           <h3>Vide-grenier Nice (Stadtgebiet)</h3>
           <p>Für So 6.9. war laut Nutzer-Recherche auch ein Vide-grenier in Nizza selbst sowie ein Termin in Cagnes bekannt — bei der Live-Prüfung erschien einer der Nizza-Termine („Vide grenier des gazelles") als <strong>abgesagt</strong>, ein Cagnes-Termin ließ sich nicht eindeutig bestätigen.</p>
@@ -673,7 +669,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🌷</span></div>
+        <div class="tile-media" style="background-image:url('images/cours-saleya-flohmarkt.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"></div>
         <div class="ex-body">
           <h3>Cours Saleya — Montags-Flohmarkt</h3>
           <p>An Montagen weicht der Blumenmarkt auf dem Cours Saleya einem Antiquitäten-/Trödelmarkt. Fällt leider auf Mo 8.9. — <strong>einen Tag nach unserer Abreise</strong>, hier nur als Hintergrundwissen für die nächste Reise vermerkt.</p>
@@ -689,7 +685,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
     <div class="wine-grid">
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>👗</span></div>
+        <div class="tile-media" style="background-image:url('images/vintage-shop-caprice.jpg');background-size:cover;background-position:center;--tile-a:#b5741f;--tile-b:#d99b45"></div>
         <div class="ex-body">
           <h3>Caprice Vintage Shop</h3>
           <p>Buntes Sortiment von Kleidung bis Möbel, günstige Preise — guter Startpunkt für einen Vintage-Bummel durch die Altstadt.</p>
@@ -700,7 +696,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>💎</span></div>
+        <div class="tile-media" style="background-image:url('images/vintage-shop-chineur.jpg');background-size:cover;background-position:center;--tile-a:#8a4a9c;--tile-b:#b578c9"></div>
         <div class="ex-body">
           <h3>Nice ô Chineur</h3>
           <p>Auf hochwertige Vintage-/Luxusstücke spezialisiert — für den geschulten Vinted-Blick interessant, um Marktpreise für gute Marken zu vergleichen.</p>
@@ -711,7 +707,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#3a5a8a;--tile-b:#5c82b5"><span>🛋️</span></div>
+        <div class="tile-media" style="background-image:url('images/vintage-shop-bozar.jpg');background-size:cover;background-position:center;--tile-a:#3a5a8a;--tile-b:#5c82b5"></div>
         <div class="ex-body">
           <h3>Bozar 2</h3>
           <p>Kleines Dépôt-vente mitten in der Altstadt, gut für preiswerte Fundstücke abseits der Touristenroute.</p>
@@ -722,7 +718,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="ex-card">
-        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🚪</span></div>
+        <div class="tile-media" style="background-image:url('images/vintage-shop-rue-droite.jpg');background-size:cover;background-position:center;--tile-a:#6a1f2e;--tile-b:#9c4a5c"></div>
         <div class="ex-body">
           <h3>Weitere Friperien, Rue Droite</h3>
           <p>Die Rue Droite (Vieux Nice) ist die Second-Hand-Achse der Altstadt — auf dem Weg von Caprice Vintage Richtung Cours Saleya liegen mehrere kleinere Friperien zum Stöbern.</p>
@@ -748,7 +744,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
     <div class="rest-items">
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🥘</span><div class="rc-rating">⭐ 4,7 (721)</div><div class="rc-price">100+ €</div></div>
+        <div class="tile-media" style="background-image:url('images/les-terraillers.jpg');background-size:cover;background-position:center;--tile-a:#6a1f2e;--tile-b:#9c4a5c"><div class="rc-rating">⭐ 4,7 (721)</div><div class="rc-price">100+ €</div></div>
         <div class="rc-body">
           <span class="for-tag special">Besonderer Abend</span><span class="for-tag papa">Vater</span>
           <h4>Les Terraillers</h4>
@@ -763,7 +759,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🍝</span><div class="rc-rating">⭐ 4,9 (353)</div><div class="rc-price">20–30 €</div></div>
+        <div class="tile-media" style="background-image:url('images/restaurant-romania.jpg');background-size:cover;background-position:center;--tile-a:#0f6e76;--tile-b:#1c9aa3"><div class="rc-rating">⭐ 4,9 (353)</div><div class="rc-price">20–30 €</div></div>
         <div class="rc-body">
           <span class="for-tag">Familie</span>
           <h4>Restaurant Romania</h4>
@@ -775,7 +771,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🌊</span><div class="rc-rating">⭐ 4,8 (391)</div><div class="rc-price">–</div></div>
+        <div class="tile-media" style="background-image:url('images/fleur-de-sel.jpg');background-size:cover;background-position:center;--tile-a:#b5741f;--tile-b:#d99b45"><div class="rc-rating">⭐ 4,8 (391)</div><div class="rc-price">–</div></div>
         <div class="rc-body">
           <span class="for-tag oma">Großmutter</span>
           <h4>Fleur de Sel</h4>
@@ -787,7 +783,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🥪</span><div class="rc-rating">⭐ 4,7 (5.243)</div><div class="rc-price">10–20 €</div></div>
+        <div class="tile-media" style="background-image:url('images/lunicco.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"><div class="rc-rating">⭐ 4,7 (5.243)</div><div class="rc-price">10–20 €</div></div>
         <div class="rc-body">
           <span class="for-tag sohn">Sohn</span><span class="for-tag">Schnell</span>
           <h4>Lunicco</h4>
@@ -799,7 +795,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#8a6d3a;--tile-b:#b5945a"><span>🍲</span><div class="rc-rating">⭐ 4,7 (872)</div><div class="rc-price">20–30 €</div></div>
+        <div class="tile-media" style="background-image:url('images/chez-palmyre.jpg');background-size:cover;background-position:center;--tile-a:#8a6d3a;--tile-b:#b5945a"><div class="rc-rating">⭐ 4,7 (872)</div><div class="rc-price">20–30 €</div></div>
         <div class="rc-body">
           <span class="for-tag oma">Großmutter</span><span class="for-tag">Bodenständig</span>
           <h4>Chez Palmyre</h4>
@@ -811,7 +807,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#1c6e9c;--tile-b:#4ea1c9"><span>🏖️</span><div class="rc-rating">⭐ 4,6 (7.747)</div><div class="rc-price">30–90 €</div></div>
+        <div class="tile-media" style="background-image:url('images/bocca-mar.jpg');background-size:cover;background-position:center;--tile-a:#1c6e9c;--tile-b:#4ea1c9"><div class="rc-rating">⭐ 4,6 (7.747)</div><div class="rc-price">30–90 €</div></div>
         <div class="rc-body">
           <span class="for-tag">Familie</span>
           <h4>Bocca Mar</h4>
@@ -823,7 +819,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#9c1f3a;--tile-b:#c94f6a"><span>🍷</span><div class="rc-rating">⭐ 4,9 (608)</div><div class="rc-price">40–90 €</div></div>
+        <div class="tile-media" style="background-image:url('images/lantidote.jpg');background-size:cover;background-position:center;--tile-a:#9c1f3a;--tile-b:#c94f6a"><div class="rc-rating">⭐ 4,9 (608)</div><div class="rc-price">40–90 €</div></div>
         <div class="rc-body">
           <span class="for-tag papa">Vater</span>
           <h4>l'Antidote</h4>
@@ -835,7 +831,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🍽️</span><div class="rc-rating">⭐ 4,8 (696)</div><div class="rc-price">40–50 €</div></div>
+        <div class="tile-media" style="background-image:url('images/la-route-du-miam.jpg');background-size:cover;background-position:center;--tile-a:#b5741f;--tile-b:#d99b45"><div class="rc-rating">⭐ 4,8 (696)</div><div class="rc-price">40–50 €</div></div>
         <div class="rc-body">
           <span class="for-tag">Besonders</span>
           <h4>La Route du Miam</h4>
@@ -847,7 +843,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🫒</span><div class="rc-rating">⭐ 4,7 (71)</div><div class="rc-price">20–30 €</div></div>
+        <div class="tile-media" style="background-image:url('images/restaurant-lauthentique.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"><div class="rc-rating">⭐ 4,7 (71)</div><div class="rc-price">20–30 €</div></div>
         <div class="rc-body">
           <span class="for-tag oma">Großmutter</span>
           <h4>Restaurant l'Authentique</h4>
@@ -859,7 +855,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#1c6e9c;--tile-b:#4ea1c9"><span>🏝️</span><div class="rc-rating">⭐ 4,8 (180)</div><div class="rc-price">30–70 €</div></div>
+        <div class="tile-media" style="background-image:url('images/napa-beach-club.jpg');background-size:cover;background-position:center;--tile-a:#1c6e9c;--tile-b:#4ea1c9"><div class="rc-rating">⭐ 4,8 (180)</div><div class="rc-price">30–70 €</div></div>
         <div class="rc-body">
           <span class="for-tag">Strand</span>
           <h4>Napa – Restaurant &amp; Beach Club</h4>
@@ -871,7 +867,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#b5741f;--tile-b:#d99b45"><span>🍽️</span><div class="rc-rating">⭐ 4,7 (1.039)</div><div class="rc-price">40–80 €</div></div>
+        <div class="tile-media" style="background-image:url('images/uva-cannes.jpg');background-size:cover;background-position:center;--tile-a:#b5741f;--tile-b:#d99b45"><div class="rc-rating">⭐ 4,7 (1.039)</div><div class="rc-price">40–80 €</div></div>
         <div class="rc-body">
           <span class="for-tag">Cannes-Tag</span>
           <h4>UVA – restaurant cannes</h4>
@@ -883,7 +879,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>☀️</span><div class="rc-rating">⭐ 4,8 (90)</div><div class="rc-price">20–30 €</div></div>
+        <div class="tile-media" style="background-image:url('images/zenit-restaurant.jpg');background-size:cover;background-position:center;--tile-a:#c9a13a;--tile-b:#e6c66a"><div class="rc-rating">⭐ 4,8 (90)</div><div class="rc-price">20–30 €</div></div>
         <div class="rc-body">
           <span class="for-tag oma">Großmutter</span>
           <h4>Zenit' Restaurant</h4>
@@ -895,7 +891,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#6a1f2e;--tile-b:#9c4a5c"><span>🥂</span><div class="rc-rating">⭐ 4,8 (1.001)</div><div class="rc-price">30–60 €</div></div>
+        <div class="tile-media" style="background-image:url('images/la-taille-de-guepe.jpg');background-size:cover;background-position:center;--tile-a:#6a1f2e;--tile-b:#9c4a5c"><div class="rc-rating">⭐ 4,8 (1.001)</div><div class="rc-price">30–60 €</div></div>
         <div class="rc-body">
           <span class="for-tag special">Besonderer Abend</span>
           <h4>La Taille de Guêpe</h4>
@@ -907,7 +903,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#3a5a8a;--tile-b:#5c82b5"><span>🥞</span><div class="rc-rating">⭐ 4,9 (262)</div><div class="rc-price">10–20 €</div></div>
+        <div class="tile-media" style="background-image:url('images/miam-antibes.jpg');background-size:cover;background-position:center;--tile-a:#3a5a8a;--tile-b:#5c82b5"><div class="rc-rating">⭐ 4,9 (262)</div><div class="rc-price">10–20 €</div></div>
         <div class="rc-body">
           <span class="for-tag sohn">Sohn</span><span class="for-tag">Günstig</span>
           <h4>Miam Antibes</h4>
@@ -919,7 +915,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#8a4a9c;--tile-b:#b578c9"><span>🏴‍☠️</span><div class="rc-rating">⭐ 4,9 (953)</div><div class="rc-price">20–30 €</div></div>
+        <div class="tile-media" style="background-image:url('images/black-sails-pirate-tavern.jpg');background-size:cover;background-position:center;--tile-a:#8a4a9c;--tile-b:#b578c9"><div class="rc-rating">⭐ 4,9 (953)</div><div class="rc-price">20–30 €</div></div>
         <div class="rc-body">
           <span class="for-tag">Familie</span><span class="for-tag">Cannes-Tag</span>
           <h4>Black Sails – A Pirate Tavern By Chef LeChat</h4>
@@ -931,7 +927,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#3a6e5a;--tile-b:#5c9c82"><span>🥡</span><div class="rc-rating">⭐ 5,0 (45)</div><div class="rc-price">10–20 €</div></div>
+        <div class="tile-media" style="background-image:url('images/le-five-cosy.jpg');background-size:cover;background-position:center;--tile-a:#3a6e5a;--tile-b:#5c9c82"><div class="rc-rating">⭐ 5,0 (45)</div><div class="rc-price">10–20 €</div></div>
         <div class="rc-body">
           <span class="for-tag sohn">Sohn</span><span class="for-tag">Günstig</span>
           <h4>Le Five Cosy – Street Food Antibes</h4>
@@ -943,7 +939,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#0f6e76;--tile-b:#1c9aa3"><span>🐟</span><div class="rc-rating">⭐ 5,0 (212)</div><div class="rc-price">20–30 €</div></div>
+        <div class="tile-media" style="background-image:url('images/losmose-restaurant.jpg');background-size:cover;background-position:center;--tile-a:#0f6e76;--tile-b:#1c9aa3"><div class="rc-rating">⭐ 5,0 (212)</div><div class="rc-price">20–30 €</div></div>
         <div class="rc-body">
           <span class="for-tag">Cannes-Tag</span>
           <h4>L'Osmose Restaurant</h4>
@@ -955,7 +951,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#c9a13a;--tile-b:#e6c66a"><span>🍇</span><div class="rc-rating">⭐ 4,7 (1.176)</div><div class="rc-price">30–40 €</div></div>
+        <div class="tile-media" style="background-image:url('images/le-terre-del-sud.jpg');background-size:cover;background-position:center;--tile-a:#c9a13a;--tile-b:#e6c66a"><div class="rc-rating">⭐ 4,7 (1.176)</div><div class="rc-price">30–40 €</div></div>
         <div class="rc-body">
           <span class="for-tag papa">Vater</span>
           <h4>Le terre del sud</h4>
@@ -967,7 +963,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#7a3b2e;--tile-b:#a85c3f"><span>🍔</span><div class="rc-rating">⭐ 4,6 (830+)</div><div class="rc-price">12–18 €</div></div>
+        <div class="tile-media" style="background-image:url('images/bubu-burger.jpg');background-size:cover;background-position:center;--tile-a:#7a3b2e;--tile-b:#a85c3f"><div class="rc-rating">⭐ 4,6 (830+)</div><div class="rc-price">12–18 €</div></div>
         <div class="rc-body">
           <span class="for-tag sohn">Sohn</span><span class="for-tag">Streetfood</span>
           <h4>Bubu Burger</h4>
@@ -979,7 +975,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
       </article>
 
       <article class="rc-card">
-        <div class="tile-media" style="--tile-a:#2e5a3b;--tile-b:#4c8a5f"><span>🍕</span><div class="rc-rating">⭐ 4,9 (6.900+)</div><div class="rc-price">10–20 €</div></div>
+        <div class="tile-media" style="background-image:url('images/les-amoureux.jpg');background-size:cover;background-position:center;--tile-a:#2e5a3b;--tile-b:#4c8a5f"><div class="rc-rating">⭐ 4,9 (6.900+)</div><div class="rc-price">10–20 €</div></div>
         <div class="rc-body">
           <span class="for-tag sohn">Sohn</span><span class="for-tag">Streetfood</span>
           <h4>Les Amoureux</h4>
@@ -1000,7 +996,7 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
   <div class="page-header wrap">
     <div class="eyebrow">Vor Ort</div>
     <h1>Kalender</h1>
-    <p class="sub">Alle Termine unserer 5 Tage (3.–7.9.2026) auf einen Blick. Anders als bei einer 13-Nächte-Reise ist hier fast alles terminkritisch — die Woche steht fest, nicht der Zeitraum.</p>
+    <p class="sub">Alle Termine der fünf Tage (3.–7.9.2026) auf einen Blick — die Woche steht fest, da lohnt es sich, Märkte und Events genau zu timen.</p>
   </div>
   <div class="wrap">
     <div class="cal-strip">
@@ -1158,6 +1154,68 @@ footer.site-footer { text-align: center; padding: 30px 20px 50px; font-size: 12p
 
   </div>
 </section>
+
+<div class="wrap" style="margin-top:10px;margin-bottom:10px">
+<details class="photo-credits">
+  <summary>Bildnachweise (alle Fotos: Wikimedia Commons, frei lizenziert)</summary>
+  <ul>
+    <li><strong>Vieux Nice &amp; Cours Saleya</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Cours_Saleya_flower_market_vegetable_stalls_Nice_2026.JPG" target="_blank" rel="noopener">Cours Saleya flower market vegetable stalls Nice 2026.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Promenade des Anglais &amp; Baie des Anges</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Vue_sur_la_Promenade_des_Anglais_26_August_2008.jpg" target="_blank" rel="noopener">Vue sur la Promenade des Anglais 26 August 2008.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Saint-Paul-de-Vence</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Saint-Paul-de-Vence_view.jpg" target="_blank" rel="noopener">Saint-Paul-de-Vence view.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Vence</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Alpes-Maritimes_banner.jpg" target="_blank" rel="noopener">Alpes-Maritimes banner.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Antibes &amp; Vieil Antibes</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Fonds_Achille_Dassonville_(1890-1967)_-_France_-_Château_Grimaldi_depuis_les_remparts_du_vieil_Antibes_(MédiHAL_4050693).jpg" target="_blank" rel="noopener">Fonds Achille Dassonville (1890-1967) - France - Château Grimaldi depuis les remparts du vieil Antibes (MédiHAL 4050693).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Cannes &amp; La Croisette</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Promenade_de_la_Croisette_Cannes_IMG_1299.jpg" target="_blank" rel="noopener">Promenade de la Croisette Cannes IMG 1299.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Monaco / Monte-Carlo</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Monte-Carlo.-_A_Travers_les_Oliviers_(NBY_443742).jpg" target="_blank" rel="noopener">Monte-Carlo.- A Travers les Oliviers (NBY 443742).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Èze</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Eze001.JPG" target="_blank" rel="noopener">Eze001.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Menton</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Entrance_of_the_old_town_of_Menton.jpg" target="_blank" rel="noopener">Entrance of the old town of Menton.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Grasse</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:France-002800_-_Perfume_Factory_(15977938866).jpg" target="_blank" rel="noopener">France-002800 - Perfume Factory (15977938866).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Cap d&#x27;Antibes</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Antibes_Baie_des_Milliardaires_01.jpg" target="_blank" rel="noopener">Antibes Baie des Milliardaires 01.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Ventimiglia (Italien)</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Bratislava_CoA_(Old_town_hall).JPG" target="_blank" rel="noopener">Bratislava CoA (Old town hall).JPG</a>, Wikimedia Commons</li>
+    <li><strong>Château de Crémat</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Chateau_de_Crémat.jpg" target="_blank" rel="noopener">Chateau de Crémat.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Château de Bellet</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:0010_Chateau_Bellet-10.jpg" target="_blank" rel="noopener">0010 Chateau Bellet-10.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Clos Saint-Vincent</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Sunset_over_the_Dordogne_river_-_Montalon,_Bordeaux,_France_-_Picture_Image_Photo_Garonne_(13902369443).jpg" target="_blank" rel="noopener">Sunset over the Dordogne river - Montalon, Bordeaux, France - Picture Image Photo Garonne (13902369443).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Domaine de Toasc</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Sunset_over_the_Dordogne_river_-_Montalon,_Bordeaux,_France_-_Picture_Image_Photo_Garonne_(13902369443).jpg" target="_blank" rel="noopener">Sunset over the Dordogne river - Montalon, Bordeaux, France - Picture Image Photo Garonne (13902369443).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Domaine de la Source</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Marseille_To_Nice_1_(208316).jpeg" target="_blank" rel="noopener">Marseille To Nice 1 (208316).jpeg</a>, Wikimedia Commons</li>
+    <li><strong>Domaine de Vinceline</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Grape_harvest_near_Santenay_1996.jpg" target="_blank" rel="noopener">Grape harvest near Santenay 1996.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Via Julia-Augusta</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Sunset_over_the_Dordogne_river_-_Montalon,_Bordeaux,_France_-_Picture_Image_Photo_Garonne_(13902369443).jpg" target="_blank" rel="noopener">Sunset over the Dordogne river - Montalon, Bordeaux, France - Picture Image Photo Garonne (13902369443).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Domaine Saint Jean</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Sunset_over_the_Dordogne_river_-_Montalon,_Bordeaux,_France_-_Picture_Image_Photo_Garonne_(13902369443).jpg" target="_blank" rel="noopener">Sunset over the Dordogne river - Montalon, Bordeaux, France - Picture Image Photo Garonne (13902369443).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Collet de Bovis</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Sunset_over_the_Dordogne_river_-_Montalon,_Bordeaux,_France_-_Picture_Image_Photo_Garonne_(13902369443).jpg" target="_blank" rel="noopener">Sunset over the Dordogne river - Montalon, Bordeaux, France - Picture Image Photo Garonne (13902369443).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Château Sainte Roseline</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Caveau_château_sainte-roseline.jpg" target="_blank" rel="noopener">Caveau château sainte-roseline.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Château Roubine</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:2008_Chateau_Roubine_Inspire_Cru_Classé_(8338308232).jpg" target="_blank" rel="noopener">2008 Chateau Roubine Inspire Cru Classé (8338308232).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Puces de Nice</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Nice-Port-ForestaPuces_Pano.jpg" target="_blank" rel="noopener">Nice-Port-ForestaPuces Pano.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Vide-grenier Bendejun</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:7-06-2015_Maquettes_(1).JPG" target="_blank" rel="noopener">7-06-2015 Maquettes (1).JPG</a>, Wikimedia Commons</li>
+    <li><strong>Vide-greniers La Gaude</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Brocante,_Bordeaux,_July_2014.JPG" target="_blank" rel="noopener">Brocante, Bordeaux, July 2014.JPG</a>, Wikimedia Commons</li>
+    <li><strong>„Débarrasse vinyles“ Antibes</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:DJ_Setup_Vinyl_Records.jpg" target="_blank" rel="noopener">DJ Setup Vinyl Records.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Vide-grenier Nice (Stadtgebiet)</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Brocante,_Bordeaux,_July_2014.JPG" target="_blank" rel="noopener">Brocante, Bordeaux, July 2014.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Cours Saleya — Montags-Flohmarkt</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Brocante,_Bordeaux,_July_2014.JPG" target="_blank" rel="noopener">Brocante, Bordeaux, July 2014.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Caprice Vintage Shop</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:DFC_4774_Young_rider_in_a_neon_helmet_crouches_over_a_vintage-style_motorcycle_at_a_bustling_outdoor_market_in_Ban_Nong_Hin_Chon_Buri.jpg" target="_blank" rel="noopener">DFC 4774 Young rider in a neon helmet crouches over a vintage-style motorcycle at a bustling outdoor market in Ban Nong Hin Chon Buri.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Nice ô Chineur</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:14_rue_Droite_Nice.jpg" target="_blank" rel="noopener">14 rue Droite Nice.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Bozar 2</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:DSCF1083_Vintage_red_barber_chairs_in_a_rustic_wooden_shop_waiting_for_the_next_customer.jpg" target="_blank" rel="noopener">DSCF1083 Vintage red barber chairs in a rustic wooden shop waiting for the next customer.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Weitere Friperien, Rue Droite</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:14_rue_Droite_Nice.jpg" target="_blank" rel="noopener">14 rue Droite Nice.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Les Terraillers</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Biot_(Alpes_Maritimes)_Jardin_Marcel_Camatte.jpg" target="_blank" rel="noopener">Biot (Alpes Maritimes) Jardin Marcel Camatte.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Restaurant Romania</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Thana_Fine_Dining_plate.jpg" target="_blank" rel="noopener">Thana Fine Dining plate.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Fleur de Sel</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Cote_d&#x27;azur_Beach_Cavalaire_sur_mer_(18432429609).jpg" target="_blank" rel="noopener">Cote d&#x27;azur Beach Cavalaire sur mer (18432429609).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Lunicco</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:5_Brothers_Groceries_and_Sandwich_Shop_-_Key_West_Florida_2011.jpg" target="_blank" rel="noopener">5 Brothers Groceries and Sandwich Shop - Key West Florida 2011.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Chez Palmyre</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Cours_Saleya_flower_market_vegetable_stalls_Nice_2026.JPG" target="_blank" rel="noopener">Cours Saleya flower market vegetable stalls Nice 2026.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Bocca Mar</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Beaches_along_the_Promenade_des_Anglais_(53535057603).jpg" target="_blank" rel="noopener">Beaches along the Promenade des Anglais (53535057603).jpg</a>, Wikimedia Commons</li>
+    <li><strong>l&#x27;Antidote</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Cours_Saleya_flower_market_vegetable_stalls_Nice_2026.JPG" target="_blank" rel="noopener">Cours Saleya flower market vegetable stalls Nice 2026.JPG</a>, Wikimedia Commons</li>
+    <li><strong>La Route du Miam</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Boca_Raton_TooJays_Reuben.JPG" target="_blank" rel="noopener">Boca Raton TooJays Reuben.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Restaurant l&#x27;Authentique</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Cours_Saleya_flower_market_vegetable_stalls_Nice_2026.JPG" target="_blank" rel="noopener">Cours Saleya flower market vegetable stalls Nice 2026.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Napa – Restaurant &amp; Beach Club</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Cote_d&#x27;azur_Beach_Cavalaire_sur_mer_(18432429609).jpg" target="_blank" rel="noopener">Cote d&#x27;azur Beach Cavalaire sur mer (18432429609).jpg</a>, Wikimedia Commons</li>
+    <li><strong>UVA – restaurant cannes</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Promenade_de_la_Croisette_Cannes_IMG_1299.jpg" target="_blank" rel="noopener">Promenade de la Croisette Cannes IMG 1299.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Zenit&#x27; Restaurant</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Cote_d&#x27;azur_Beach_Cavalaire_sur_mer_(18432429609).jpg" target="_blank" rel="noopener">Cote d&#x27;azur Beach Cavalaire sur mer (18432429609).jpg</a>, Wikimedia Commons</li>
+    <li><strong>La Taille de Guêpe</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Fonds_Achille_Dassonville_(1890-1967)_-_France_-_Château_Grimaldi_depuis_les_remparts_du_vieil_Antibes_(MédiHAL_4050693).jpg" target="_blank" rel="noopener">Fonds Achille Dassonville (1890-1967) - France - Château Grimaldi depuis les remparts du vieil Antibes (MédiHAL 4050693).jpg</a>, Wikimedia Commons</li>
+    <li><strong>Miam Antibes</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Chamrousse,_Isère_department,_Auvergne-Rhône-Alpes_region,_France_-_crepes_and_wine.jpg" target="_blank" rel="noopener">Chamrousse, Isère department, Auvergne-Rhône-Alpes region, France - crepes and wine.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Black Sails – A Pirate Tavern By Chef LeChat</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Boats_in_Cannes_Harbour_-_panoramio.jpg" target="_blank" rel="noopener">Boats in Cannes Harbour - panoramio.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Le Five Cosy – Street Food Antibes</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Asian_Street_Food_Vendor_(Unsplash).jpg" target="_blank" rel="noopener">Asian Street Food Vendor (Unsplash).jpg</a>, Wikimedia Commons</li>
+    <li><strong>L&#x27;Osmose Restaurant</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Fish_on_a_plate_in_a_restaurant_in_Hangzhou,_China_-_December_2011.jpg" target="_blank" rel="noopener">Fish on a plate in a restaurant in Hangzhou, China - December 2011.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Le terre del sud</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Italian_Specialty_Restaurant,_Pyongyang,_North_Korea.jpg" target="_blank" rel="noopener">Italian Specialty Restaurant, Pyongyang, North Korea.jpg</a>, Wikimedia Commons</li>
+    <li><strong>Bubu Burger</strong> — <em>repräsentatives Foto</em> (kein Bild der konkreten Adresse verfügbar): <a href="https://commons.wikimedia.org/wiki/File:Cours_Saleya_flower_market_vegetable_stalls_Nice_2026.JPG" target="_blank" rel="noopener">Cours Saleya flower market vegetable stalls Nice 2026.JPG</a>, Wikimedia Commons</li>
+    <li><strong>Les Amoureux</strong> — Foto: <a href="https://commons.wikimedia.org/wiki/File:Oven_at_Punch_Pizza,_Highland_Park,_Saint_Paul_(2198176403).jpg" target="_blank" rel="noopener">Oven at Punch Pizza, Highland Park, Saint Paul (2198176403).jpg</a>, Wikimedia Commons</li>
+  </ul>
+  <p class="dim" style="font-size:11.5px;margin-top:6px">Bei Karten ohne Foto der konkreten Adresse (v. a. kleinere Weingüter und einzelne Restaurants) wurde ein thematisch passendes, aber nicht ortsspezifisches Foto verwendet — einzeln oben vermerkt.</p>
+</details>
+</div>
 
 <footer class="site-footer">
   Nizza &amp; Côte d'Azur 2026 — inoffizieller Reiseführer für den Kurztrip · Stand der Recherche: 01.09.2026<br>
